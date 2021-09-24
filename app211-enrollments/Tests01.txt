@@ -1,0 +1,12 @@
+Course computing = new Course("BT1SFT1", "BSc Software Engineering");
+Student student = new Student("Joshua Sweeney", 100163328);
+student.print();
+ Student ID: 100163328 Name: Joshua Sweeney
+student.enrol(computing);
+student.printCourse();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BT1SFT1: BSc Software Engineering
+

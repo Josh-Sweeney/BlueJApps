@@ -7,8 +7,12 @@
  */
 public class Module
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // The code of this module
+    private String code;
+    // The title of this module
+    private String title;
+    // The credit value of this module
+    private int creditValue;
 
     /**
      * Constructor for objects of class Module

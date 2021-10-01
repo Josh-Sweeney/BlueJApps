@@ -13,6 +13,8 @@ public class Course
     private String code;
     // The full title including qualification and subject
     private String title;
+    // The module of this course
+    private Module module;
     
     /**
      * Create a Course with a maximum number of enrolments. 

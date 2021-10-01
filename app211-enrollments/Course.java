@@ -49,4 +49,12 @@ public class Course
         System.out.println(" --------------------------------");
         System.out.println();
     }
+
+    /* 
+     * Adds a module to this course
+     */
+    public void addModule(Module module)
+    {
+        this.module = module;
+    }
 }

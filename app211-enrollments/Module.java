@@ -15,12 +15,14 @@ public class Module
     private int creditValue;
 
     /**
-     * Constructor for objects of class Module
+     * Create a Module with the module code and title
+     * Credit value is 0 by default
      */
-    public Module()
+    public Module(String code, String title)
     {
-        // initialise instance variables
-        x = 0;
+        this.code = code;
+        this.title = title;
+        this.creditValue = 0;
     }
 
     /* 

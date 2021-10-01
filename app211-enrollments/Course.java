@@ -37,6 +37,10 @@ public class Course
         
         System.out.println(" Course Code: " + code + ": " + title);
         System.out.println();
+        System.out.println(" Module Code: " + this.module.code);
+        System.out.println(" Module Title: " + this.module.title);
+        System.out.println(" Module Credit Value: " + this.module.creditValue);
+        System.out.println();
     }
     
     /**

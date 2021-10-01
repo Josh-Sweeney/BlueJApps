@@ -23,15 +23,27 @@ public class Module
         x = 0;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+    /* 
+     * Gets the code of this course
      */
-    public int sampleMethod(int y)
+    public String getCode()
     {
-        // put your code here
-        return x + y;
+        return this.code;
+    }
+
+    /* 
+     * Gets the title of this course
+     */
+    public String getTitle()
+    {
+        return this.title;
+    }
+
+    /* 
+     * Gets the credit value of this course
+     */
+    public String getCreditValue()
+    {
+        return this.creditValue;
     }
 }

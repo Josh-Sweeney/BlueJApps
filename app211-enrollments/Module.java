@@ -54,4 +54,14 @@ public class Module
     {
         this.creditValue = newCreditValue;
     }
+    
+    /*
+     * Prints all of the details of this module
+     */
+    public void print()
+    {
+        System.out.println(" Module Code: " + this.code);
+        System.out.println(" Module Title: " + this.title);
+        System.out.println(" Module Credit Value: " + this.creditValue);
+    }
 }

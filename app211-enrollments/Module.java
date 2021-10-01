@@ -46,4 +46,12 @@ public class Module
     {
         return this.creditValue;
     }
+
+    /*
+     * Sets the credit value of this course
+     */
+    public void setCreditValue(int newCreditValue)
+    {
+        this.creditValue = newCreditValue;
+    }
 }

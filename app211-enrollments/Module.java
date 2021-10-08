@@ -44,7 +44,7 @@ public class Module
     /* 
      * Gets the credit value of this course
      */
-    public String getCreditValue()
+    public int getCreditValue()
     {
         return this.creditValue;
     }

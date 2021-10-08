@@ -8,11 +8,11 @@
 public class Module
 {
     // The code of this module
-    private String code;
+    public String code;
     // The title of this module
-    private String title;
+    public String title;
     // The credit value of this module
-    private int creditValue;
+    public int creditValue;
 
     /**
      * Create a Module with the module code and title

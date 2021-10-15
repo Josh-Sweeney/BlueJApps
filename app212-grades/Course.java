@@ -46,6 +46,10 @@ public class Course
 
     }
     
+    /**
+     * Adds a module to this course.
+     * Only allows 4 courses to be added as defined by MAXN_MODULES
+     */
     public void addModule(Module module)
     {
         if(modules.size() < MAXN_MODULES)
@@ -80,7 +84,7 @@ public class Course
         System.out.println();
         System.out.println(" Course " + code + ": " + title);
         //System.out.println();
-        
+
         printModules();
     }
     

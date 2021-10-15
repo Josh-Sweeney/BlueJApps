@@ -43,7 +43,15 @@ public class Course
      */
     public void createModules()
     {
+        Module computerArchitectures = new Module("CO450", "Computer Architectures");
+        Module networking = new Module("CO451", "Networking");
+        Module programmingConecepts = new Module("CO452", "Programming Concepts");
+        Module webDevelopment = new Module("CO456", "Web Development");
 
+        this.addModule(computerArchitectures);
+        this.addModule(networking);
+        this.addModule(programmingConecepts);
+        this.addModule(webDevelopment);
     }
     
     /**

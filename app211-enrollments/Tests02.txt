@@ -19,11 +19,11 @@ module.print();
 computing.print();
  --------------------------------
    App211: Course Details
- --------------------------------
+ --------------------------------    Exception occurred.
+
 
  Course Code: BT1SFT1: BSc Software Engineering
 
-    Exception occurred.
 computing.addModule(module);
 computing.print();
  --------------------------------
@@ -32,7 +32,10 @@ computing.print();
 
  Course Code: BT1SFT1: BSc Software Engineering
 
+ --------------------------------
+   App211: Module Details
+ --------------------------------
+
  Module Code: CO452
  Module Title: Programming Concepts
  Module Credit Value: 15
-

@@ -1,7 +1,7 @@
 Course computing = new Course("BT1SFT1", "BSc Software Engineering");
-Student student = new Student("Joshua Sweeney", 100163328);
+Student student = new Student("Joshua Sweeney", 22102043);
 student.print();
- Student ID: 100163328 Name: Joshua Sweeney
+ Student ID: 22102043 Name: Joshua Sweeney
 student.enrol(computing);
 student.printCourse();
  --------------------------------

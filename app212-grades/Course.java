@@ -91,7 +91,7 @@ public class Course
     {
         System.out.println();
         System.out.println(" Course " + code + ": " + title);
-        //System.out.println();
+        System.out.println();
 
         printModules();
     }

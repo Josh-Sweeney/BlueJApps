@@ -1,0 +1,32 @@
+Student student = new Student("Joshua Sweeney", 22102043);
+student.print();
+ Student ID: 22102043, Joshua Sweeney
+Course course = new Course("BT1SFT1", "BSc Software Engineering");
+student.enrol(course);
+student.printCourse();
+ Student ID: 22102043, Joshua Sweeney
+
+ Course BT1SFT1: BSc Software Engineering
+
+Module module = new Module("CO452", "Programming Concepts");
+course.addModule(module);
+ModuleMark moduleMark = new ModuleMark(module);
+moduleMark.setMark(60);
+student.addMark(moduleMark);
+student.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22102043, Joshua Sweeney
+
+ Course BT1SFT1: BSc Software Engineering
+
+
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+
+ No Final Course Grade Yet!

@@ -6,7 +6,7 @@ import java.util.*;
  *
  * @author Derek Peacock
  * @modified by Joshua Sweeney
- * @version 2.0 01/10/21
+ * @version 3.0 15/10/21
  */
 public class Course
 {
@@ -38,10 +38,8 @@ public class Course
         
         System.out.println(" Course Code: " + code + ": " + title);
         System.out.println();
-        System.out.println(" Module Code: " + this.module.code);
-        System.out.println(" Module Title: " + this.module.title);
-        System.out.println(" Module Credit Value: " + this.module.creditValue);
-        System.out.println();
+
+        this.module.print();
     }
     
     /**

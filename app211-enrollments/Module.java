@@ -4,7 +4,7 @@
  * about a module which is a part of a class
  *
  * @author Joshua Sweeney
- * @version v2.0 08/10/21
+ * @version v3.0 15/10/21
  */
 public class Module
 {
@@ -13,7 +13,7 @@ public class Module
     // The title of this module
     public String title;
     // The credit value of this module
-    public int creditValue;
+    public int creditValue = 0;
 
     /**
      * This is a contructor method to create a Module
@@ -24,7 +24,6 @@ public class Module
     {
         this.code = code;
         this.title = title;
-        this.creditValue = 0;
     }
 
     /* 

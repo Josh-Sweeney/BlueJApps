@@ -67,11 +67,22 @@ public class Course
     }
     
     /**
-     * 
+     * Converts and returns a percentage mark to a final grade
      */
     public Grades convertToGrade(int mark)
     {
-        return Grades.NS;
+        if (mark >= 0 && mark <= 39)
+            return Grades.NS;
+        else if (mark >= 40 && mark <= 49)
+            return Grades.F;
+        else if (mark >= 50 && mark <= 59)
+            return Grades.D;
+        else if (mark >= 60 && mark <= 69)
+            return Grades.B;
+        else if (mark >= 70 && mark <= 100)
+            return Grades.A;
+        else // If an invalid grade was passed in, return 0 (Grades.NS)
+            return Grades.NS;
     }
     
     /**

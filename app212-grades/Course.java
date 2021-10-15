@@ -91,7 +91,16 @@ public class Course
      */
     public Grades calculateGrade(ArrayList<ModuleMark> marks)
     {
-        return Grades.NS;
+        int markSum = 0;
+
+        for (ModuleMark moduleMark : marks)
+        {
+            markSum += moduleMark.getValue();
+        }
+
+        int averageMark = markSum / marks.size();
+
+        return convertToGrade(averageMark);
     }
     
     /**

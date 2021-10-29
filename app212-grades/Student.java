@@ -49,7 +49,13 @@ public class Student
      */
     public void awardMark(String moduleCode, int value)
     {
-
+        for (ModuleMark moduleMark : this.marks)
+        {
+            if (moduleMark.getModule().code == moduleCode)
+            {
+                moduleMark.mark = value;
+            }
+        }
     }
     
     /**

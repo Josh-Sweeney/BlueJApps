@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Random;
 /**
  * The Student class represents a student in a student administration system.
  * It holds the student details relevant in our context.
@@ -75,7 +76,17 @@ public class Student
      */
     public void awardTestMarks()
     {
+
+    /*
+     * Generates a random number between 0 and 100 to be used
+       as a mark
+    */
+    private int randomMark()
+    {
+        Random random = new Random();
         
+        // Returns a random number where 100 is the upper bound
+        return random.nextInt(100);
     }
     
     /**

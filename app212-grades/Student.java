@@ -76,6 +76,15 @@ public class Student
      */
     public void awardTestMarks()
     {
+        for (Module module : this.course.modules)
+        {
+            ModuleMark moduleMark = new ModuleMark(module);
+            
+            moduleMark.setMark(this.randomMark());
+            
+            this.marks.add(moduleMark);
+        }
+    }
 
     /*
      * Generates a random number between 0 and 100 to be used

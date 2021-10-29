@@ -109,10 +109,12 @@ public class Student
         this.print();
         course.print();
     }
-    
+    /*
+     * Prints the modules this student is enrolled on
+     */
     private void printModules()
     {
-
+        this.course.printModules();
     }
     
     public void printTranscript()

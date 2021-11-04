@@ -52,9 +52,7 @@ public class Student
     {
         for (ModuleMark moduleMark : this.marks)
         {
-            Module currentModule = moduleMark.getModule();
-            
-            if (currentModule.getCode() == moduleCode)
+            if (moduleMark.getModule().getCode() == moduleCode)
             {
                 moduleMark.setMark(value);
             }

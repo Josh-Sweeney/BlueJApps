@@ -88,6 +88,7 @@ public class Course
     /**
      * Calculate the average mark from the four module marks
      * and convert that into a final grade.
+     * @return the final grade of this course
      */
     public Grades calculateGrade(ArrayList<ModuleMark> marks)
     {
@@ -95,12 +96,14 @@ public class Course
 
         for (ModuleMark moduleMark : marks)
         {
-            markSum += moduleMark.getValue();
+            markSum += moduleMark.getMark();
         }
 
         int averageMark = markSum / marks.size();
 
-        return convertToGrade(averageMark);
+        finalGrade = convertToGrade(averageMark);
+
+        return finalGrade;
     }
     
     /**

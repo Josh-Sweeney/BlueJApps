@@ -134,7 +134,19 @@ public class Student
      */
     private void printModules()
     {
-        this.course.printModules();
+        for (int i = 0; i < course.modules.size(); i++)
+        {
+            Module currentModule = course.modules.get(i);
+
+            // Get the details for printing
+            String code = currentModule.getCode();
+            String title = currentModule.getTitle();
+            int credit = Module.CREDIT;
+            int mark = marks.get(i).getMark();
+            Grades grade = course.convertToGrade(mark);
+
+            System.out.println(code + "\t" + title + "\t" + credit + "\t" + mark + "\t" + grade);
+        }
     }
     
     public void printTranscript()
@@ -151,8 +163,9 @@ public class Student
         System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
         System.out.println(" Code \t Module \t\tCredit\t Mark \t Grade");
         System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
+
+        printModules();
         
-       
         Grades finalGrade = course.calculateGrade(marks);
         
         System.out.println();

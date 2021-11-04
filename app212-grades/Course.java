@@ -3,20 +3,28 @@ import java.util.ArrayList;
  * This class stores information about a course
  * that enrolled students may want to complete
  *
- * @author Derek Peacock, Nicholas Day and Joshua Sweeney
- * @version 0.2 15/Oct/2021
+ * @author Derek Peacock & Nicholas Day
+ * @author Modified by Joshua Sweeney
+ * @version 0.3 4/Nov/2021
  */
 public class Course
 {
+    // Defines the maxinum number of modules for a course
     public final static int MAXN_MODULES = 4;
     
+    // A list of the modules present on this course
     public ArrayList<Module> modules;
     
     private String code;
     private String title;
     
+    // The final grade calculated by the average marks of 
+    // the 4 modules
     private Grades finalGrade;
      
+    /**
+     * Constructor that creates a predefined course
+     */
     public Course()
     {
         this("G400", "BSc Computing");
@@ -31,9 +39,8 @@ public class Course
         this.code = code;
         this.title = title;
         
-        modules  = new ArrayList<Module>();
-        
-        createModules();
+        // Create a new list of modules
+        modules = new ArrayList<Module>();
     }
 
     /**
@@ -44,13 +51,15 @@ public class Course
     public void createModules()
     {
         Module computerArchitectures = new Module("CO450", "Computer Architectures");
-        Module networking = new Module("CO451", "Networking");
-        Module programmingConecepts = new Module("CO452", "Programming Concepts");
-        Module webDevelopment = new Module("CO456", "Web Development");
+        // Use \t in the name so the course grades table displays correctly
+        Module networking = new Module("CO451", "Networking\t");
+        Module programmingConcepts = new Module("CO452", "Programming Concepts");
+        // Use \t in the name so the course grades table displays correctly
+        Module webDevelopment = new Module("CO456", "Web Development\t");
 
         this.addModule(computerArchitectures);
         this.addModule(networking);
-        this.addModule(programmingConecepts);
+        this.addModule(programmingConcepts);
         this.addModule(webDevelopment);
     }
     
@@ -68,6 +77,7 @@ public class Course
     
     /**
      * Converts and returns a percentage mark to a final grade
+     * @return the value of the converted grade
      */
     public Grades convertToGrade(int mark)
     {

@@ -1,0 +1,81 @@
+Student student = new Student("Joshua Sweeney", 22102043);
+Course course = new Course("BT1SFT1", "BSc Software Engineering");
+student.enrol(course);
+Module module1 = new Module("CO450", "Computer Architectures");
+ModuleMark moduleMark1 = new ModuleMark(module1);
+moduleMark1.setMark(60);
+course.addModule(module1);
+student.addMark(moduleMark1);
+student.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by Joshua Sweeney 
+ ------------------------------------
+ Student ID: 22102043, Joshua Sweeney
+
+ Course BT1SFT1: BSc Software Engineering
+
+
+ CO450: 	Computer Architectures: 	15
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+CO450	Computer Architectures	15	60	B
+
+
+ Final Course Grade = B
+student.awardMark("CO450", 20);
+student.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by Joshua Sweeney 
+ ------------------------------------
+ Student ID: 22102043, Joshua Sweeney
+
+ Course BT1SFT1: BSc Software Engineering
+
+
+ CO450: 	Computer Architectures: 	15
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+CO450	Computer Architectures	15	20	NS
+
+
+ No Final Course Grade Yet!
+student.awardMark("CO450", 101);
+student.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by Joshua Sweeney 
+ ------------------------------------
+ Student ID: 22102043, Joshua Sweeney
+
+ Course BT1SFT1: BSc Software Engineering
+
+
+ CO450: 	Computer Architectures: 	15
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+CO450	Computer Architectures	15	101	NS
+
+
+ No Final Course Grade Yet!
+Module module2 = new Module("CO452", "Programming Concepts");
+Module module3 = new Module("CO451", "Networking");
+Module module4 = new Module("CO456", "Web Development");
+Module module5 = new Module("TEST", "Test Module");
+course.addModule(module2);
+course.addModule(module3);
+course.addModule(module4);
+course.addModule(module5);
+course.printModules();
+
+ CO450: 	Computer Architectures: 	15
+ CO452: 	Programming Concepts: 	15
+ CO451: 	Networking: 	15
+ CO456: 	Web Development: 	15

@@ -1,0 +1,38 @@
+Student student = new Student("Joshua Sweeney", 22102043);
+Course course = new Course("BT1SFT1", "BSc Software Engineering");
+student.enrol(course);
+course.createModules();
+course.print();
+
+ Course BT1SFT1: BSc Software Engineering
+
+
+ CO450: 	Computer Architectures: 	15
+ CO451: 	Networking	: 	15
+ CO452: 	Programming Concepts: 	15
+ CO456: 	Web Development	: 	15student.awardTestMarks();
+student.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by Joshua Sweeney 
+ ------------------------------------
+ Student ID: 22102043, Joshua Sweeney
+
+ Course BT1SFT1: BSc Software Engineering
+
+
+ CO450: 	Computer Architectures: 	15
+ CO451: 	Networking	: 	15
+ CO452: 	Programming Concepts: 	15
+ CO456: 	Web Development	: 	15
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+CO450	Computer Architectures	15	70	A
+CO451	Networking		15	83	A
+CO452	Programming Concepts	15	13	NS
+CO456	Web Development		15	35	NS
+
+
+ Final Course Grade = D

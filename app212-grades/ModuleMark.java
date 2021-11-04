@@ -2,8 +2,9 @@
 /**
  * Write a description of class ModuleMark here.
  *
- * @author Derek Peacock and Nicholas Day
- * @version 2021-08-18
+ * @author Derek Peacock & Nicholas Day
+ * @author Modified by Joshua Sweeney
+ * @version 2021-11-04
  */
 public class ModuleMark
 {
@@ -19,7 +20,7 @@ public class ModuleMark
         this.module = module;
     }
     
-    public int getValue()
+    public int getMark()
     {
         return mark;
     }

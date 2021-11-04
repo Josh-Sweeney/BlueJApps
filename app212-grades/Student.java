@@ -65,6 +65,7 @@ public class Student
     public void enrol(Course course)
     {
         this.course = course;
+        course.addStudent(this);
         awardTestMarks();
     }
     

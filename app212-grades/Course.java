@@ -15,6 +15,9 @@ public class Course
     // A list of the modules present on this course
     public ArrayList<Module> modules;
     
+    // A list of students that are apart of this course
+    private ArrayList<Student> students;
+    
     private String code;
     private String title;
     
@@ -41,6 +44,9 @@ public class Course
         
         // Create a new list of modules
         modules = new ArrayList<Module>();
+        
+        // Create a new list of students
+        students = new ArrayList<Student>();
     }
 
     /**
@@ -137,6 +143,25 @@ public class Course
         for (Module module : modules)
         {
             module.print();
+        }
+    }
+
+    /**
+     * Adds a student to this course
+     */
+    public void addStudent(Student student)
+    {
+        this.students.add(student);
+    }
+
+    /**
+     * Prints the students enrolled on this course
+     */
+    public void printEnrolments()
+    {
+        for (Student student : students)
+        {
+            student.print();
         }
     }
 }

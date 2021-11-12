@@ -147,6 +147,10 @@ public class StockList
         System.out.println();
     }
     
+    /**
+     * Prints the heading for this stock list
+     * to be used in conjunction with print()
+     */
     public void printHeading()
     {
         System.out.println();

@@ -1,4 +1,4 @@
-
+import java.util.Random;
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
@@ -63,4 +63,16 @@ public class StockDemo
     private void sellProducts()
     {
     }    
+
+    /**
+     * Generates a random number to be used as the
+     * quantity when buying products
+     * @return A random number between 0 and 100
+     */
+    private int getRandomQuantity()
+    {
+        Random random = new Random();
+
+        return random.nextInt(100);
+    }
 }

@@ -123,7 +123,6 @@ public class StockList
             System.out.println("Cannot remove product with ID " + product + " as it doesn't exist");
         }
     }
-
     
     /**
      * Locate a product with the given ID, and return how
@@ -143,6 +142,28 @@ public class StockList
         else
         {
             return 0;
+        }
+    }
+
+    /**
+     * Prints products that contain a specific string in their name
+     * @param containsName The string to find in the products name
+     */
+    public void printProducts(String containsName)
+    {
+        printHeading();
+        System.out.println();
+        System.out.println("Products containing " + containsName + ":");
+
+        // Iterate over every product
+        for (Product product : stock)
+        {
+            // Check if the product contains the string passed in
+            if (product.getName().contains(containsName))
+            {
+                // Print that product by getting its ID
+                printProduct(product.getID());
+            }
         }
     }
 

@@ -47,6 +47,16 @@ public class StockList
      */
     public void buyProduct(int productID, int amount)
     {
+        Product product = findProduct(productID);
+
+        if (product != null)
+        {
+            product.increaseQuantity(amount);
+        }
+        else
+        {
+            System.out.println("Cannot buy product with ID " + product + " as it wasn't found in the stock list. ");
+        }
     }
     
     /**

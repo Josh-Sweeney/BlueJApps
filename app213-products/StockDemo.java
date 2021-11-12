@@ -47,14 +47,28 @@ public class StockDemo
     public void runDemo()
     {
         // Show details of all of the products before delivery.
-        
         stock.print();
 
+        // Buy the products with random quantities
         buyProducts();
+
+        // Show the details of the products after buying
         stock.print();        
 
+        // Sell 1 of each product
         sellProducts();
+
+        // Show the details of the products after selling
         stock.print();        
+
+        // Remove the first product ("Samsung Galaxy S10")
+        stock.removeProduct(102);
+
+        // List products that start with "Samsung"
+        stock.printProducts("Samsung");
+        
+        // List products that are below 25 quantity
+        stock.printProducts(25);
     }
     
     /**

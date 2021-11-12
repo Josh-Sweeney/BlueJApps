@@ -68,7 +68,7 @@ public class StockDemo
 
         // Remove the first product ("Samsung Galaxy S10")
         System.out.println("Removing the product 'Samsung Galaxy S10': ");
-        stock.removeProduct(102);
+        stock.removeProduct(101);
 
         // Show the details of the products after removing the product
         stock.print();

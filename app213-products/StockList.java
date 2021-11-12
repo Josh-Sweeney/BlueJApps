@@ -104,7 +104,25 @@ public class StockList
             // printout message
             System.out.println("Product " + productID + "not found");
         }
-    }    
+    }
+
+    /**
+     * Removes a product from the stock list
+     * @param productID The ID of the product to remove
+     */
+    public void removeProduct(int productID)
+    {
+        Product product = findProduct(productID);
+
+        if (product != null)
+        {
+            stock.remove(product);
+        }
+        else
+        {
+            System.out.println("Cannot remove product with ID " + product + " as it doesn't exist");
+        }
+    }
 
     
     /**

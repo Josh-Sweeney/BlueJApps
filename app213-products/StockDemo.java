@@ -33,8 +33,11 @@ public class StockDemo
         stock.add(new Product(107, "Samsung Galaxy S7"));
         stock.add(new Product(108, "Samsung Galaxy S6 Edge+"));
         stock.add(new Product(109, "Samsung Galaxy S6"));
-        stock.add(new Product(110, "Samsung Galaxy S5"));
+        stock.add(new Product(110, "Galaxy S5"));
         stock.add(new Product(111, "Samsung Galaxy S4"));
+
+        System.out.println();
+        System.out.println("Added 11 unique products to the stock list. ");
     }
     
     /**
@@ -48,21 +51,27 @@ public class StockDemo
     {
         // Show details of all of the products before delivery.
         stock.print();
-
+        
         // Buy the products with random quantities
+        System.out.println("Buying random amounts of each product: ");
         buyProducts();
 
         // Show the details of the products after buying
         stock.print();        
 
         // Sell 1 of each product
+        System.out.println("Selling 1 of each product: ");
         sellProducts();
 
         // Show the details of the products after selling
-        stock.print();        
+        stock.print();
 
         // Remove the first product ("Samsung Galaxy S10")
+        System.out.println("Removing the product 'Samsung Galaxy S10': ");
         stock.removeProduct(102);
+
+        // Show the details of the products after removing the product
+        stock.print();
 
         // List products that start with "Samsung"
         stock.printProducts("Samsung");

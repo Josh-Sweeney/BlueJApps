@@ -152,7 +152,7 @@ public class StockList
     public void printProducts(String containsName)
     {
         printHeading();
-        System.out.println();
+        
         System.out.println("Products containing " + containsName + ":");
 
         // Iterate over every product
@@ -174,7 +174,7 @@ public class StockList
     public void printProducts(int belowQuantity)
     {
         printHeading();
-        System.out.println();
+        
         System.out.println("Products below " + belowQuantity + " quantity: ");
 
         // Iterate over every product

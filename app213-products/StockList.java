@@ -31,6 +31,7 @@ public class StockList
     
     /**
      * A method to buy a single quantity of the product
+     * @param productID The id of the product to buy
      */
     public void buyProduct(int productID)
     {

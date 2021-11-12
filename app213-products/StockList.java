@@ -104,7 +104,16 @@ public class StockList
      */
     public int numberInStock(int productID)
     {
-        return 0;
+        Product product = findProduct(productID);
+
+        if (product != null)
+        {
+            return product.getQuantity();
+        }
+        else
+        {
+            return 0;
+        }
     }
 
     /**

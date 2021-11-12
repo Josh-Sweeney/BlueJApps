@@ -1,0 +1,102 @@
+StockList stockList = new StockList();
+StockDemo stockDemo = new StockDemo(stockList);
+
+Added 11 unique products to the stock list. 
+stockDemo.runDemo();
+
+ Sweeney's Stock List
+ ====================
+
+ ID 101: Samsung Galaxy S10 stock level: 0
+ ID 102: Samsung Galaxy S9+ stock level: 0
+ ID 103: Samsung Galaxy S9 stock level: 0
+ ID 104: Samsung Galaxy S8+ stock level: 0
+ ID 105: Samsung Galaxy S8 stock level: 0
+ ID 106: Samsung Galaxy S7 Edge stock level: 0
+ ID 107: Samsung Galaxy S7 stock level: 0
+ ID 108: Samsung Galaxy S6 Edge+ stock level: 0
+ ID 109: Samsung Galaxy S6 stock level: 0
+ ID 110: Galaxy S5 stock level: 0
+ ID 111: Samsung Galaxy S4 stock level: 0
+
+Buying random amounts of each product: 
+
+ Sweeney's Stock List
+ ====================
+
+ ID 101: Samsung Galaxy S10 stock level: 11
+ ID 102: Samsung Galaxy S9+ stock level: 38
+ ID 103: Samsung Galaxy S9 stock level: 46
+ ID 104: Samsung Galaxy S8+ stock level: 69
+ ID 105: Samsung Galaxy S8 stock level: 74
+ ID 106: Samsung Galaxy S7 Edge stock level: 81
+ ID 107: Samsung Galaxy S7 stock level: 29
+ ID 108: Samsung Galaxy S6 Edge+ stock level: 14
+ ID 109: Samsung Galaxy S6 stock level: 61
+ ID 110: Galaxy S5 stock level: 44
+ ID 111: Samsung Galaxy S4 stock level: 46
+
+Selling 1 of each product: 
+Decreased quantity of product Samsung Galaxy S10 by 1
+Decreased quantity of product Samsung Galaxy S9+ by 1
+Decreased quantity of product Samsung Galaxy S9 by 1
+Decreased quantity of product Samsung Galaxy S8+ by 1
+Decreased quantity of product Samsung Galaxy S8 by 1
+Decreased quantity of product Samsung Galaxy S7 Edge by 1
+Decreased quantity of product Samsung Galaxy S7 by 1
+Decreased quantity of product Samsung Galaxy S6 Edge+ by 1
+Decreased quantity of product Samsung Galaxy S6 by 1
+Decreased quantity of product Galaxy S5 by 1
+Decreased quantity of product Samsung Galaxy S4 by 1
+
+ Sweeney's Stock List
+ ====================
+
+ ID 101: Samsung Galaxy S10 stock level: 10
+ ID 102: Samsung Galaxy S9+ stock level: 37
+ ID 103: Samsung Galaxy S9 stock level: 45
+ ID 104: Samsung Galaxy S8+ stock level: 68
+ ID 105: Samsung Galaxy S8 stock level: 73
+ ID 106: Samsung Galaxy S7 Edge stock level: 80
+ ID 107: Samsung Galaxy S7 stock level: 28
+ ID 108: Samsung Galaxy S6 Edge+ stock level: 13
+ ID 109: Samsung Galaxy S6 stock level: 60
+ ID 110: Galaxy S5 stock level: 43
+ ID 111: Samsung Galaxy S4 stock level: 45
+
+Removing the product 'Samsung Galaxy S10': 
+
+ Sweeney's Stock List
+ ====================
+
+ ID 102: Samsung Galaxy S9+ stock level: 37
+ ID 103: Samsung Galaxy S9 stock level: 45
+ ID 104: Samsung Galaxy S8+ stock level: 68
+ ID 105: Samsung Galaxy S8 stock level: 73
+ ID 106: Samsung Galaxy S7 Edge stock level: 80
+ ID 107: Samsung Galaxy S7 stock level: 28
+ ID 108: Samsung Galaxy S6 Edge+ stock level: 13
+ ID 109: Samsung Galaxy S6 stock level: 60
+ ID 110: Galaxy S5 stock level: 43
+ ID 111: Samsung Galaxy S4 stock level: 45
+
+
+ Sweeney's Stock List
+ ====================
+
+Products containing Samsung:
+ ID 102: Samsung Galaxy S9+ stock level: 37
+ ID 103: Samsung Galaxy S9 stock level: 45
+ ID 104: Samsung Galaxy S8+ stock level: 68
+ ID 105: Samsung Galaxy S8 stock level: 73
+ ID 106: Samsung Galaxy S7 Edge stock level: 80
+ ID 107: Samsung Galaxy S7 stock level: 28
+ ID 108: Samsung Galaxy S6 Edge+ stock level: 13
+ ID 109: Samsung Galaxy S6 stock level: 60
+ ID 111: Samsung Galaxy S4 stock level: 45
+
+ Sweeney's Stock List
+ ====================
+
+Products below 25 quantity: 
+ ID 108: Samsung Galaxy S6 Edge+ stock level: 13

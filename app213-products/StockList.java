@@ -168,6 +168,28 @@ public class StockList
     }
 
     /**
+     * Prints products that are below a given quantity level
+     * @param belowQuantity The quantity level to check for products under
+     */
+    public void printProducts(int belowQuantity)
+    {
+        printHeading();
+        System.out.println();
+        System.out.println("Products below " + belowQuantity + " quantity: ");
+
+        // Iterate over every product
+        for (Product product : stock)
+        {
+            // Check if the product is below the given threshold
+            if (product.getQuantity() < belowQuantity)
+            {
+                // Print that product by getting its ID
+                printProduct(product.getID());
+            }
+        }
+    }
+
+    /**
      * Print details of the given product. If found,
      * its name and stock quantity will be shown.
      * @param id The ID of the product to look for.

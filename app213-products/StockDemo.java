@@ -77,9 +77,26 @@ public class StockDemo
         }
     }
 
+    /**
+     * Sells the products from the stock
+     */
     private void sellProducts()
     {
-    }    
+        for (int i = 101; i < 112; i++)
+        {
+            // Check if the product exists
+            Product product = stock.findProduct(i);
+
+            if (product != null)
+            {
+                stock.sellProduct(i);
+            }
+            else
+            {
+                System.out.println("Product with ID " + i + " not found. ");
+            }
+        }
+    }
 
     /**
      * Generates a random number to be used as the

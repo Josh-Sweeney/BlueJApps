@@ -38,7 +38,6 @@ public class StockList
         buyProduct(productID, 1);
     }
     
-    
     /**
      * Buy a quantity of a particular product.
      * Increase the quantity of the product by the given amount.
@@ -167,7 +166,7 @@ public class StockList
     public void printHeading()
     {
         System.out.println();
-        System.out.println(" Peacock's Stock List");
+        System.out.println(" Sweeney's Stock List");
         System.out.println(" ====================");
         System.out.println();
     }

@@ -56,8 +56,25 @@ public class StockDemo
         stock.print();        
     }
     
+    /**
+     * Buys the products from the stock with
+     * random quantities
+     */
     private void buyProducts()
     {
+        for (int i = 101; i < 112; i++)
+        {
+            Product product = stock.findProduct(i);
+            
+            if (product != null)
+            {
+                stock.buyProduct(i, getRandomQuantity());
+            }
+            else
+            {
+                System.out.println("Product with ID " + i + " not found. ");
+            }
+        }
     }
 
     private void sellProducts()

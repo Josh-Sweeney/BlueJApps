@@ -51,9 +51,17 @@ public class StockList
     /**
      * Find a product to match the product id,
      * if not found return null
+     * @param productID the ID of the product to find
      */
     public Product findProduct(int productID)
     {
+        for (Product product : this.stock)
+        {
+            if (product.getID() == productID)
+            {
+                return product;
+            }
+        }
         return null;
     }
     

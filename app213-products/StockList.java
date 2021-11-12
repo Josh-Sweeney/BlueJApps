@@ -76,7 +76,6 @@ public class StockList
         return null;
     }
     
-    
     /**
      * Sell one of the given product.
      * Show the before and after status of the product.
@@ -93,15 +92,18 @@ public class StockList
                 product.decreaseQuantity(1);
                 
                 // printout message
+                System.out.println("Decreased quantity of product " + product.getName() + " by 1");
             }
             else
             {
                 // printout message
+                System.out.println("Product " + product.getName() + " has a quantity of 0, cannot decrease quantity. ");
             }
         }
         else
         {
             // printout message
+            System.out.println("Product " + productID + "not found");
         }
     }    
 

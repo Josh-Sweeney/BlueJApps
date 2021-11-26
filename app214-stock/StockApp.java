@@ -11,7 +11,7 @@ public class StockApp
 {
     private InputReader reader;
     
-    //private ProductList stock;
+    private ProductList stock;
     
     /**
      * Constructor for objects of class StockApp
@@ -20,7 +20,7 @@ public class StockApp
     {
         reader = new InputReader();
         
-        //stock = new ProductList();
+        stock = new ProductList();
         //StockDemo demo = new StockDemo(stock);
     }
 
@@ -54,7 +54,7 @@ public class StockApp
                 //remove old product
                 break;
             case "print":
-                //stock.print();
+                stock.print();
                 break;
             case "quit":
                 return true;

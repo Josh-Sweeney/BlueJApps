@@ -47,8 +47,17 @@ public class StockApp
     {
         switch(choice)
         {
-            case "add":
-                //add new product
+            case "add":    
+                // Get the ID of the product using user input
+                int productId = reader.getInt("Enter the ID of the product: ");
+                
+                // Get the name of the product using user input
+                String productName = reader.getString("Enter the name of the product: ");
+                
+                // Create the product and add it to the product list
+                Product product = new Product(productId, productName);
+                stock.add(product);
+
                 break;
             case "remove":
                 //remove old product

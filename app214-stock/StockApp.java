@@ -47,10 +47,9 @@ public class StockApp
     {
         switch(choice)
         {
-            case "add":    
-                // Get the ID of the product using user input
-                int productId = reader.getInt("Enter the ID of the product: ");
-                
+            case "add":
+                addProduct();
+                break;
                 // Get the name of the product using user input
                 String productName = reader.getString("Enter the name of the product: ");
                 
@@ -69,12 +68,24 @@ public class StockApp
                 return true;
             default:
                 System.out.println("Invalid option selected. ");
-                return false;
-        }
-
-        return false;
+    
+    /**
+     * Add's a new product to the product list using
+     * user input
+     */
+    private void addProduct()
+    {
+        // Get the ID of the product using user input
+        int productId = reader.getInt("Enter the ID of the product: ");
+        
+        // Get the name of the product using user input
+        String productName = reader.getString("Enter the name of the product: ");
+        
+        // Create the product and add it to the product list
+        Product product = new Product(productId, productName);
+        stock.add(product);
     }
-   
+    
     /**
      * Print out a menu of operation choices
      */

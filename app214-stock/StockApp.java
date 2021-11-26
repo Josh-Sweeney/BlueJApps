@@ -65,6 +65,9 @@ public class StockApp
             case "search":
                 searchProduct();
                 break;
+            case "stock":
+                stock.printProducts(5);
+                break;
             case "quit":
                 return true;
             default:
@@ -147,6 +150,7 @@ public class StockApp
         // Filter and print the products
         stock.printProducts(filter);
     }
+        
     /**
      * Print out a menu of operation choices
      */
@@ -159,6 +163,7 @@ public class StockApp
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    Print:      Print all products");
         System.out.println("    Search:     Prints all products containing a string");
+        System.out.println("    Stock:      Prints all products that are of low quantity");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
     }

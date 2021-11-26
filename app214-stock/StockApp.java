@@ -45,15 +45,24 @@ public class StockApp
     
     private boolean executeChoice(String choice)
     {
-        if(choice.equals("quit"))
+        switch(choice)
         {
-            return true;
+            case "add":
+                //add new product
+                break;
+            case "remove":
+                //remove old product
+                break;
+            case "print":
+                //stock.print();
+                break;
+            case "quit":
+                return true;
+            default:
+                System.out.println("Invalid option selected. ");
+                return false;
         }
-        else if(choice.equals("print"))
-        {
-            //stock.print();
-        }
-        
+
         return false;
     }
    

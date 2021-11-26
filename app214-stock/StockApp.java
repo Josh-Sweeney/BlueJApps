@@ -68,6 +68,9 @@ public class StockApp
             case "stock":
                 stock.printProducts(5);
                 break;
+            case "restock":
+                stock.restock();
+                break;
             case "quit":
                 return true;
             default:
@@ -164,6 +167,7 @@ public class StockApp
         System.out.println("    Print:      Print all products");
         System.out.println("    Search:     Prints all products containing a string");
         System.out.println("    Stock:      Prints all products that are of low quantity");
+        System.out.println("    Restock:    Restocks all products below the minimum stock level");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
     }

@@ -12,6 +12,9 @@ public class ProductList
     // A list of the products.
     private ArrayList<Product> stock;
 
+    // The minimum stock level a product is allowed
+    private final int MIN_STOCK_LEVEL = 5;
+
     /**
      * Initialise the stock manager.
      */
@@ -162,6 +165,24 @@ public class ProductList
         else
         {
             return 0;
+        }
+    }
+
+    /**
+     * Restocks all products in the stock list if they are
+     * below the minimum stock level
+     */
+    public void restock()
+    {
+        // Find all products that need restocking
+        for (Product product : this.stock)
+        {
+            if (product.getQuantity() < MIN_STOCK_LEVEL)
+            {
+                // Restock the product
+                product.setQuantity(MIN_STOCK_LEVEL);
+                System.out.println("Restocking product " + product.getName());
+            }
         }
     }
 

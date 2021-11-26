@@ -50,6 +50,9 @@ public class StockApp
             case "add":
                 addProduct();
                 break;
+            case "buy":
+                buyProduct();
+                break;
             case "remove":
                 removeProduct();
                 break;
@@ -97,12 +100,28 @@ public class StockApp
     }
     
     /**
+     * Buys between 1-10 products from the product list
+     * using user input
+     */
+    private void buyProduct()
+    {
+        // Get the product ID from the user
+        int productID = reader.getInt("Enter the ID of the product to buy: ");
+
+        // Get the quantity from the user
+        int productQuantity = reader.getInt("Enter the quantity you would like to buy (between 1 and 10): ");
+
+        stock.buyProduct(productID, productQuantity);
+    }
+
+    /**
      * Print out a menu of operation choices
      */
     private void printMenuChoices()
     {
         System.out.println();
         System.out.println("    Add:        Add a new product");
+        System.out.println("    Buy:        Buy a quantity of a product");
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    Print:      Print all products");
         System.out.println("    Quit:       Quit the program");

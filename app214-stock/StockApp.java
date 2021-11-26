@@ -50,16 +50,8 @@ public class StockApp
             case "add":
                 addProduct();
                 break;
-                // Get the name of the product using user input
-                String productName = reader.getString("Enter the name of the product: ");
-                
-                // Create the product and add it to the product list
-                Product product = new Product(productId, productName);
-                stock.add(product);
-
-                break;
             case "remove":
-                //remove old product
+                removeProduct();
                 break;
             case "print":
                 stock.print();
@@ -68,6 +60,11 @@ public class StockApp
                 return true;
             default:
                 System.out.println("Invalid option selected. ");
+            break;
+        }
+        
+        return false;
+    }
     
     /**
      * Add's a new product to the product list using
@@ -84,6 +81,19 @@ public class StockApp
         // Create the product and add it to the product list
         Product product = new Product(productId, productName);
         stock.add(product);
+    }
+
+    /**
+     * Removes an old product from the product list
+     * using user input
+     */
+    private void removeProduct()
+    {
+        // Get the product ID to remove from using user input
+        int productId = reader.getInt("Enter the ID of the product to remove: ");
+        
+        // Try to remove the product from the product list
+        stock.removeProduct(productId);
     }
     
     /**

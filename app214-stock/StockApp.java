@@ -53,6 +53,9 @@ public class StockApp
             case "buy":
                 buyProduct();
                 break;
+            case "sell":
+                sellProduct();
+                break;
             case "remove":
                 removeProduct();
                 break;
@@ -113,6 +116,21 @@ public class StockApp
 
         stock.buyProduct(productID, productQuantity);
     }
+    
+    /**
+     * Sells between 1-10 products from the product list
+     * using user input
+     */
+    private void sellProduct()
+    {
+        // Get the product ID from the user
+        int productID = reader.getInt("Enter the ID of the product to buy: ");
+
+        // Get the quantity from the user
+        int productQuantity = reader.getInt("Enter the quantity you would like to buy (between 1 and 10): ");
+
+        stock.sellProduct(productID, productQuantity);
+    }
 
     /**
      * Print out a menu of operation choices
@@ -122,6 +140,7 @@ public class StockApp
         System.out.println();
         System.out.println("    Add:        Add a new product");
         System.out.println("    Buy:        Buy a quantity of a product");
+        System.out.println("    Sell:       Se1ll a quantity of a product");
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    Print:      Print all products");
         System.out.println("    Quit:       Quit the program");

@@ -107,6 +107,26 @@ public class ProductList
     }
 
     /**
+     * Sell a quantity of a particular product.
+     * Decrease the quantity of the product by the given amount.
+     * @param id The ID of the product.
+     * @param amount The amount to decrease the quantity by.
+     */
+    public void sellProduct(int productID, int amount)
+    {
+        Product product = findProduct(productID);
+
+        if (product != null)
+        {
+            product.decreaseQuantity(amount);
+        }
+        else
+        {
+            System.out.println("Cannot sell product with ID " + product + " as it wasn't found in the stock list. ");
+        }
+    }
+
+    /**
      * Removes a product from the stock list
      * @param productID The ID of the product to remove
      */

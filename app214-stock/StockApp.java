@@ -62,6 +62,9 @@ public class StockApp
             case "print":
                 stock.print();
                 break;
+            case "search":
+                searchProduct();
+                break;
             case "quit":
                 return true;
             default:
@@ -133,6 +136,18 @@ public class StockApp
     }
 
     /**
+     * Prints a list of products filtered by part of the
+     * product name using user input
+     */
+    private void searchProduct()
+    {
+        // Get the filter using user input
+        String filter = reader.getString("Enter the part of the name to find: ");
+
+        // Filter and print the products
+        stock.printProducts(filter);
+    }
+    /**
      * Print out a menu of operation choices
      */
     private void printMenuChoices()
@@ -143,6 +158,7 @@ public class StockApp
         System.out.println("    Sell:       Se1ll a quantity of a product");
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    Print:      Print all products");
+        System.out.println("    Search:     Prints all products containing a string");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
     }

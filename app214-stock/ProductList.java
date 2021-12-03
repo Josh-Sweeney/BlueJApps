@@ -24,12 +24,20 @@ public class ProductList
     }
 
     /**
-     * Add a product to the list.
+     * Add a product to the stock list.
      * @param item The product item to be added.
      */
     public void add(Product item)
     {
-        stock.add(item);
+        // Check if the product exists in the stock list already
+        if (findProduct(item.getID()) == null)
+        {
+            System.out.println("Product '" + item.getName() + "' already exists in the stock list. ");
+        }
+        else
+        {
+            stock.add(item);
+        }
     }
     
     /**

@@ -132,10 +132,10 @@ public class StockApp
     private void sellProduct()
     {
         // Get the product ID from the user
-        int productID = reader.getInt("Enter the ID of the product to buy: ");
+        int productID = reader.getInt("Enter the ID of the product to sell: ");
 
         // Get the quantity from the user
-        int productQuantity = reader.getInt("Enter the quantity you would like to buy (between 1 and 10): ");
+        int productQuantity = reader.getInt("Enter the quantity you would like to sell (between 1 and 10): ");
 
         stock.sellProduct(productID, productQuantity);
     }

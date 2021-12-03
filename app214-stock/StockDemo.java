@@ -20,7 +20,19 @@ public class StockDemo
     public StockDemo(ProductList stock)
     {
         this.stock = stock;
-        
+
+        stock = getProducts();
+    }
+
+    /**
+     * Returns a list of products to be added to the stock
+     * list for a demo
+     * @return A list of products
+     */
+    public ProductList getProducts()
+    {
+        ProductList stock = new ProductList();
+
         // Add at least 10 products, they must be unique to you
         // Make sure the ids are sequential numbers
         
@@ -38,6 +50,8 @@ public class StockDemo
 
         System.out.println();
         System.out.println("Added 11 unique products to the stock list. ");
+        
+        return stock;
     }
     
     /**

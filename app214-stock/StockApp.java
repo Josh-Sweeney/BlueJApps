@@ -4,7 +4,7 @@
  * print and remove stock products
  *
  * @author Joshua Sweeney
- * @version 26/11/21
+ * @version 03/12/21
  */
 public class StockApp
 {

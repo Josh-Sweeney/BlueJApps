@@ -1,0 +1,246 @@
+Please enter your choice > buy
+Enter the ID of the product to buy: 
+102
+Enter the quantity you would like to buy (between 1 and 10): 
+4
+********************************
+  App21-04: Stock Application
+      by Joshua Sweeney
+********************************
+
+    Add:        Add a new product
+    Buy:        Buy a quantity of a product
+    Sell:       Se1ll a quantity of a product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Search:     Prints all products containing a string
+    Stock:      Prints all products that are of low quantity
+    Restock:    Restocks all products below the minimum stock level
+    Quit:       Quit the program
+
+Please enter your choice >
+Your input is blank!
+
+Please enter your choice > print
+
+ Sweeney's Stock List
+ ====================
+
+ ID 102: Samsung Galaxy S9+ stock level: 4
+ ID 103: Samsung Galaxy S9 stock level: 0
+ ID 104: Samsung Galaxy S8+ stock level: 0
+ ID 105: Samsung Galaxy S8 stock level: 0
+ ID 106: Samsung Galaxy S7 Edge stock level: 0
+ ID 107: Samsung Galaxy S7 stock level: 0
+ ID 108: Samsung Galaxy S6 Edge+ stock level: 0
+ ID 109: Samsung Galaxy S6 stock level: 0
+ ID 110: Galaxy S5 stock level: 0
+ ID 111: Samsung Galaxy S4 stock level: 0
+ ID 200: test stock level: 0
+
+********************************
+  App21-04: Stock Application
+      by Joshua Sweeney
+********************************
+
+    Add:        Add a new product
+    Buy:        Buy a quantity of a product
+    Sell:       Se1ll a quantity of a product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Search:     Prints all products containing a string
+    Stock:      Prints all products that are of low quantity
+    Restock:    Restocks all products below the minimum stock level
+    Quit:       Quit the program
+
+Please enter your choice > sell
+Enter the ID of the product to sell: 
+102
+Enter the quantity you would like to sell (between 1 and 10): 
+4
+********************************
+  App21-04: Stock Application
+      by Joshua Sweeney
+********************************
+
+    Add:        Add a new product
+    Buy:        Buy a quantity of a product
+    Sell:       Se1ll a quantity of a product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Search:     Prints all products containing a string
+    Stock:      Prints all products that are of low quantity       
+    Restock:    Restocks all products below the minimum stock level
+    Quit:       Quit the program
+
+Please enter your choice >
+Your input is blank!
+
+Please enter your choice > print
+
+ Sweeney's Stock List
+ ====================
+
+ ID 102: Samsung Galaxy S9+ stock level: 0     
+ ID 103: Samsung Galaxy S9 stock level: 0      
+ ID 104: Samsung Galaxy S8+ stock level: 0     
+ ID 105: Samsung Galaxy S8 stock level: 0      
+ ID 106: Samsung Galaxy S7 Edge stock level: 0 
+ ID 107: Samsung Galaxy S7 stock level: 0      
+ ID 108: Samsung Galaxy S6 Edge+ stock level: 0
+ ID 109: Samsung Galaxy S6 stock level: 0      
+ ID 110: Galaxy S5 stock level: 0
+ ID 111: Samsung Galaxy S4 stock level: 0      
+ ID 200: test stock level: 0
+
+********************************
+  App21-04: Stock Application
+      by Joshua Sweeney
+********************************
+
+    Add:        Add a new product
+    Buy:        Buy a quantity of a product
+    Sell:       Se1ll a quantity of a product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Search:     Prints all products containing a string
+    Stock:      Prints all products that are of low quantity
+    Restock:    Restocks all products below the minimum stock level
+    Quit:       Quit the program
+
+Please enter your choice > search
+Enter the part of the name to find: S5
+
+ Sweeney's Stock List
+ ====================
+
+Products containing S5:
+ ID 110: Galaxy S5 stock level: 0
+********************************
+  App21-04: Stock Application
+      by Joshua Sweeney
+********************************
+
+    Add:        Add a new product
+    Buy:        Buy a quantity of a product
+    Sell:       Se1ll a quantity of a product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Search:     Prints all products containing a string
+    Stock:      Prints all products that are of low quantity       
+    Restock:    Restocks all products below the minimum stock level
+    Quit:       Quit the program
+
+Please enter your choice > buy
+Enter the ID of the product to buy: 
+102
+Enter the quantity you would like to buy (between 1 and 10): 
+5
+********************************
+  App21-04: Stock Application
+      by Joshua Sweeney
+********************************
+
+    Add:        Add a new product
+    Buy:        Buy a quantity of a product
+    Sell:       Se1ll a quantity of a product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Search:     Prints all products containing a string
+    Stock:      Prints all products that are of low quantity
+    Restock:    Restocks all products below the minimum stock level
+    Quit:       Quit the program
+
+Please enter your choice >
+Your input is blank!
+
+Please enter your choice > stock
+
+ Sweeney's Stock List
+ ====================
+
+Products below 5 quantity:
+ ID 103: Samsung Galaxy S9 stock level: 0
+ ID 104: Samsung Galaxy S8+ stock level: 0
+ ID 105: Samsung Galaxy S8 stock level: 0
+ ID 106: Samsung Galaxy S7 Edge stock level: 0
+ ID 107: Samsung Galaxy S7 stock level: 0
+ ID 108: Samsung Galaxy S6 Edge+ stock level: 0
+ ID 109: Samsung Galaxy S6 stock level: 0
+ ID 110: Galaxy S5 stock level: 0
+ ID 111: Samsung Galaxy S4 stock level: 0
+ ID 200: test stock level: 0
+********************************
+  App21-04: Stock Application
+      by Joshua Sweeney
+********************************
+
+    Add:        Add a new product
+    Buy:        Buy a quantity of a product
+    Sell:       Se1ll a quantity of a product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Search:     Prints all products containing a string
+    Stock:      Prints all products that are of low quantity
+    Restock:    Restocks all products below the minimum stock level
+    Quit:       Quit the program
+
+Please enter your choice > restock
+Restocking product Samsung Galaxy S9
+Restocking product Samsung Galaxy S8+
+Restocking product Samsung Galaxy S8
+Restocking product Samsung Galaxy S7 Edge
+Restocking product Samsung Galaxy S7
+Restocking product Samsung Galaxy S6 Edge+
+Restocking product Samsung Galaxy S6
+Restocking product Galaxy S5
+Restocking product Samsung Galaxy S4
+Restocking product test
+********************************
+  App21-04: Stock Application
+      by Joshua Sweeney
+********************************
+
+    Add:        Add a new product
+    Buy:        Buy a quantity of a product
+    Sell:       Se1ll a quantity of a product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Search:     Prints all products containing a string
+    Stock:      Prints all products that are of low quantity
+    Restock:    Restocks all products below the minimum stock level
+    Quit:       Quit the program
+
+Please enter your choice > print
+
+ Sweeney's Stock List
+ ====================
+
+ ID 102: Samsung Galaxy S9+ stock level: 5
+ ID 103: Samsung Galaxy S9 stock level: 5
+ ID 104: Samsung Galaxy S8+ stock level: 5
+ ID 105: Samsung Galaxy S8 stock level: 5
+ ID 106: Samsung Galaxy S7 Edge stock level: 5
+ ID 107: Samsung Galaxy S7 stock level: 5
+ ID 108: Samsung Galaxy S6 Edge+ stock level: 5
+ ID 109: Samsung Galaxy S6 stock level: 5
+ ID 110: Galaxy S5 stock level: 5
+ ID 111: Samsung Galaxy S4 stock level: 5
+ ID 200: test stock level: 5
+
+********************************
+  App21-04: Stock Application
+      by Joshua Sweeney
+********************************
+
+    Add:        Add a new product
+    Buy:        Buy a quantity of a product
+    Sell:       Se1ll a quantity of a product
+    Remove:     Remove an old product
+    Print:      Print all products
+    Search:     Prints all products containing a string
+    Stock:      Prints all products that are of low quantity
+    Restock:    Restocks all products below the minimum stock level
+    Quit:       Quit the program
+
+Please enter your choice >

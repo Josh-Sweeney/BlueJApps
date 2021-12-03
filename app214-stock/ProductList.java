@@ -30,7 +30,7 @@ public class ProductList
     public void add(Product item)
     {
         // Check if the product exists in the stock list already
-        if (findProduct(item.getID()) == null)
+        if (findProduct(item.getID()) != null)
         {
             System.out.println("Product '" + item.getName() + "' already exists in the stock list. ");
         }

@@ -151,7 +151,7 @@ public class ProductList
         }
         else
         {
-            System.out.println("Cannot remove product with ID " + product + " as it doesn't exist");
+            System.out.println("Cannot remove product with ID " + productID + " as it doesn't exist");
         }
     }
     

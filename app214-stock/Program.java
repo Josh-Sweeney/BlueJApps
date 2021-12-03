@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Program here.
+ * The main class that runs the stock program
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Joshua Sweeney
+ * @version 26/11/21
  */
 public class Program
 {

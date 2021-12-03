@@ -1,4 +1,3 @@
-
 /**
  * This app provides a user interface to the
  * stock manager so that users can add, edit,

@@ -6,7 +6,7 @@ import java.util.Random;
  * 
  * @author David J. Barnes and Michael Kölling.
  * @author Modified by Joshua Sweeney
- * @version 12/11/21
+ * @version 26/11/21
  */
 public class StockDemo
 {

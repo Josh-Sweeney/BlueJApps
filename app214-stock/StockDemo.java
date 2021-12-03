@@ -21,21 +21,8 @@ public class StockDemo
     {
         this.stock = stock;
 
-        stock = getProducts();
-    }
-
-    /**
-     * Returns a list of products to be added to the stock
-     * list for a demo
-     * @return A list of products
-     */
-    public ProductList getProducts()
-    {
-        ProductList stock = new ProductList();
-
         // Add at least 10 products, they must be unique to you
         // Make sure the ids are sequential numbers
-        
         stock.add(new Product(101, "Samsung Galaxy S10"));
         stock.add(new Product(102, "Samsung Galaxy S9+"));
         stock.add(new Product(103, "Samsung Galaxy S9"));
@@ -50,8 +37,6 @@ public class StockDemo
 
         System.out.println();
         System.out.println("Added 11 unique products to the stock list. ");
-        
-        return stock;
     }
     
     /**

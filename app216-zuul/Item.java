@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Represents an item that the player can collect and use
  * @author Joshua Sweeney
@@ -11,14 +13,18 @@ public class Item
 	// Name of item
 	private String name;
 
+	// List of rooms where this item can be used
+	private ArrayList<String> useLocations;
+
 	/**
 	 * Creates a new item using a name and
 	 * type of item
 	 */
-	Item(String name, ItemType type)
+	Item(String name, ItemType type, ArrayList<String> useLocations)
 	{
 		this.name = name;
 		this.type = type;
+		this.useLocations = useLocations;
 	}
 
 	/**
@@ -37,5 +43,18 @@ public class Item
 	public ItemType getItemType()
 	{
 		return this.type;
+	}
+
+	/**
+	 * Checks if this item can be used in the
+	 * current room
+	 * @param room The room to check where the
+	 * item can be used in
+	 * @return status indicating if the item
+	 * can be used in this room
+	 */
+	public boolean canUseItem(String room)
+	{
+		return this.useLocations.contains(room);
 	}
 }

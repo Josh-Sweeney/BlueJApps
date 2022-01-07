@@ -30,4 +30,28 @@ public class Player
 		this.score = score;
 		inventory = new ArrayList<Item>();
     }
+
+	/**
+	 * Attempts to find an item from the player's
+	 * inventory based on its name
+	 * @param name the name of the item to search
+	 * for
+	 * @return the found item. If not found null
+	 * is returned
+	 */
+	public Item findInventoryItem(String name)
+	{
+		// Iterate over every item in the inventory
+		for (Item item : this.inventory)
+		{
+			// Return the current item if the name matches
+			if (item.getName() == name)
+			{		
+				return item;
+			}
+		}
+		
+		// If not found, return null
+		return null;
+	}
 }

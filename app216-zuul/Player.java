@@ -14,7 +14,7 @@ public class Player
 	public int score;
 
 	// Inventory
-	public ArrayList inventory;
+	public ArrayList<Item> inventory;
 
 	/**
 	 * Creates a new player with an initial
@@ -28,6 +28,6 @@ public class Player
     {
         this.health = health;
 		this.score = score;
-		inventory = new ArrayList();
+		inventory = new ArrayList<Item>();
     }
 }

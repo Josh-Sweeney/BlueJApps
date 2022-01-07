@@ -14,13 +14,13 @@ public class Item
 	private String name;
 
 	// List of rooms where this item can be used
-	private ArrayList<String> useLocations;
+	private ArrayList<Location> useLocations;
 
 	/**
 	 * Creates a new item using a name and
 	 * type of item
 	 */
-	Item(String name, ItemType type, ArrayList<String> useLocations)
+	Item(String name, ItemType type, ArrayList<Location> useLocations)
 	{
 		this.name = name;
 		this.type = type;
@@ -53,7 +53,7 @@ public class Item
 	 * @return status indicating if the item
 	 * can be used in this room
 	 */
-	public boolean canUseItem(String room)
+	public boolean canUseItem(Location room)
 	{
 		return this.useLocations.contains(room);
 	}

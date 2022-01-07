@@ -10,6 +10,8 @@ public enum CommandWords
 {
     GO   ("go","Exit location in <direction>"),
     TAKE ("take", "Take <item> from location"),
+    USE  ("use", "Use <item> from inventory"),
+    TALK ("talk", "Talk to a <person> in the market"),
     HELP ("help", "List all available commands"),
     QUIT ("quit", "End the game");
     

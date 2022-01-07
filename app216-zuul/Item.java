@@ -20,4 +20,22 @@ public class Item
 		this.name = name;
 		this.type = type;
 	}
+
+	/**
+	 * Gets and returns the current name of
+	 * this item
+	 */
+	public String getName()
+	{
+		return this.name;
+	}
+
+	/**
+	 * Gets and returns the current item
+	 * type
+	 */
+	public ItemType getItemType()
+	{
+		return this.type;
+	}
 }

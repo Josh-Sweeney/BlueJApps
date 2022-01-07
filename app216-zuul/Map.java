@@ -41,9 +41,9 @@ public class Map
 		createMarket();
 
 		// Hubs (more than one entrance & exit)
-        createPark();
 		createForest();
 		createTownCentre();
+        createPark();
 		
 		// Start the game in the park
         currentLocation = park;

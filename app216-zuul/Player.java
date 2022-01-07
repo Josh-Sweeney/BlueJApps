@@ -13,9 +13,21 @@ public class Player
 	// Score
 	public int score;
 
+	// Inventory
+	public ArrayList inventory;
+
+	/**
+	 * Creates a new player with an initial
+	 * health and score
+	 * @param health the initial health of the
+	 * player
+	 * @param score the initial score of the 
+	 * plaer
+	 */
     public Player(int health, int score)
     {
         this.health = health;
 		this.score = score;
+		inventory = new ArrayList();
     }
 }

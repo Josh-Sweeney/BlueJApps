@@ -3,20 +3,17 @@
  * This class is reponsible for creating and
  * linking all the Locations in the game to
  * form a 2D or 3D network
- *
- *  [Pub]<---->[Outside]<---->[Theatre]
- *                 |
- *          [Computer Lab]<---->[Office]
  *             
  * @author Derek Peacock and Nicholas Day
- * @version 2021-08-22
+ * @author Modified by Joshua Sweeney
+ * @version 07-01-22
  */
 public class Map
 {
-    // Need to add a list of exits
-    
-    private Location outside, theater, pub, lab, office;
-
+	// All the locations the player can access
+    private Location park, forest, cave, townCentre, pub, bank, theatre, barber, market;
+	
+	// The current location the player is present in
     private Location currentLocation;
 
     /**
@@ -35,71 +32,110 @@ public class Map
      */
     private void createLocations()
     {
-        createOutside();
-        createTheatre();
-        createPub();
-        createOffice();
-        createLab();
+		// Single locations (one entrance & exit)
+		createCave();
+		createTheatre();
+		createPub();
+		createBank();
+		createBarber();
+		createMarket();
 
-        currentLocation = outside;  // start game outside
+		// Hubs (more than one entrance & exit)
+        createPark();
+		createForest();
+		createTownCentre();
+		
+		// Start the game in the park
+        currentLocation = park;
     }
+
+	/**
+	 * Create the park and link it to the
+	 * cave
+	 */
+	private void createPark() {
+		park = new Location("A park in the centre of a small village");
+		park.setExit("north", forest);
+		park.setExit("west", townCentre);
+	}
+
+	/**
+	 * Create the forest and link it to the
+	 * park and cave
+	 */
+	private void createForest() {
+		forest = new Location("A forest next to the park. There is a cave nearby");
+		forest.setExit("south", park);
+		forest.setExit("west", cave);
+	}
+	
+	/**
+	 * Create the cave and link it to the
+	 * forest
+	 */
+	private void createCave() {
+		cave = new Location("A dark cave within the forest");
+		cave.setExit("east", forest);
+	}
+
+	/**
+	 * Create the town centre and link it
+	 * to the barber, bank, theatre and pub
+	 */
+	private void createTownCentre() {
+		townCentre = new Location("The centre of the town");
+		townCentre.setExit("Barber", barber);
+		townCentre.setExit("Bank", bank);
+		townCentre.setExit("Theatre", theatre);
+		townCentre.setExit("Barber", barber);
+	}
+	
+	/**
+	 * Create the barber and link it to
+	 * the town centre
+	 */
+	private void createBarber() {
+		barber = new Location("The barber shop");
+		barber.setExit("exit", townCentre);
+	}
+	
+	/**
+	 * Create the bank and link it to
+	 * the town centre
+	 */
+	private void createBank() {
+		bank = new Location("The bank");
+		bank.setExit("exit", townCentre);
+	}
+	
+    /**
+	 * Create the pub and link it to 
+	 * the town centre
+     */
+	private void createPub()
+    {
+		pub = new Location("The pub");
+        pub.setExit("exit", townCentre);
+    }
+	
+	/**
+	 * Create the market and link it to
+	 * the town centre
+	 */
+	private void createMarket() {
+		market = new Location("The market of the town");
+		market.setExit("south", townCentre);
+	}
     
     /**
-     * Create the outside and link it to the
-     * theatre, lab and pub
+	 * Create the theatre linked to the outside
      */
-    private void createOutside()
+	private void createTheatre()
     {
-        outside = new Location("outside the main entrance of the university");
-        
+		theatre = new Location("in a theatre");
+		theatre.setExit("exit", townCentre);        
     }
-    
-    /**
-     * Create the pub and link it to the outside
-     */
-    private void createPub()
-    {
-        pub = new Location("in the campus pub");
         
-        pub.setExit("east", outside);
-        outside.setExit("west", pub);
-    }
-    
-    /**
-     * Create the theatre linked to the outside
-     */
-    private void createTheatre()
-    {
-        theater = new Location("in a lecture theater");
-        
-        theater.setExit("west", outside);
-        outside.setExit("east", theater);
-    }
-    
-    /**
-     * Create the office linked to the lab
-     */
-    private void createOffice()
-    {
-        office = new Location("in the computing admin office");
-        
-    }
-    
-    /**
-     * Create the lab and link it to the outside and office
-     */
-    private void createLab()
-    {
-        // create the Locations
-        lab = new Location("in a computing lab");
-        
-        lab.setExit("east", office);
-        office.setExit("west", lab);
-        
-        lab.setExit("north", outside);
-        outside.setExit("south", lab);
-    }
-    
     public Location getCurrentLocation()
     {
         return currentLocation;

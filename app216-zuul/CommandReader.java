@@ -57,6 +57,8 @@ public class CommandReader
             else word2 = null;
         }
 
+        tokenizer.close();
+
         return executeCommand();
     }
 

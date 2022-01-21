@@ -14,7 +14,8 @@ import java.util.Iterator;
  * 
  * @author  Michael Kölling and David J. Barnes
  * Modified by Derek Peacock & Nicholas Day
- * @version 2016.02.29
+ * Modified by Joshua Sweeney
+ * @version 21-01-22
  */
 
 public class Location 
@@ -28,6 +29,9 @@ public class Location
     // Stores the items available in this location
     private HashMap<String, Item> items;
 
+    // Stores the people that the player can talk to
+    // in this location
+    private HashMap<String, String> people;
 
     /**
      * Create a location described "description". Initially, it has
@@ -39,6 +43,31 @@ public class Location
         this.description = description;
         exits = new HashMap<>();
         this.items = new HashMap<>();
+        this.people = new HashMap<>();
+    }
+    
+    /**
+     * Adds a new person to this location with a name
+     * and dialog
+     * @param name The name of the person
+     * @param dialog The dialog this person will say when the
+     * player talks to them
+     */
+    public void addPerson(String name, String dialog)
+    {
+        this.people.put(name, dialog);
+    }
+
+    /**
+     * Gets the dialog from a person
+     * @param name The name of the person's dialog
+     * @return
+     */
+    public String getDialog(String name)
+    {
+        return this.people.get(name);
+    }
+
     /**
      * Adds an item to the list of items available
      * in this location
@@ -121,6 +150,32 @@ public class Location
         {
             // Append the item name to the message
             output += itemName;
+        }
+
+        // Return the final output
+        return output;
+    }
+
+    /**
+     * Returns the people that are in this area in the format:
+    *      People: person1, person2
+     * @return
+     */
+    public String getPeopleString()
+    {
+        // Return a message if there are no people in this room
+        if (this.people.isEmpty())
+        {
+            return "There are no people in this area. ";
+        }
+
+        String output = "People: ";
+
+        // Iterate over the keys of the people hashmap (names)
+        for (String person : people.keySet())
+        {
+            // Append the person name to the message
+            output += person;
         }
 
         // Return the final output

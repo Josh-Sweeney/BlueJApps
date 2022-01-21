@@ -1,9 +1,10 @@
-import java.util.ArrayList;
 /**
- * Write a description of class HelpCommand here.
+ * This class provides functionality to provide help
+ * to the player about how to play the game and
+ * how to use the commands
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Joshua Sweeney
+ * @version 21-01-22
  */
 public class HelpCommand extends ZuulCommand
 {
@@ -19,8 +20,8 @@ public class HelpCommand extends ZuulCommand
      */
     public void execute()
     {
-        System.out.println(" You are lost. You are alone. You wander");
-        System.out.println(" around at the university.");        
+        System.out.println(" You find yourself in a park");
+        System.out.println(" in the centre of a small town.");        
         System.out.println();
         System.out.println(" Your command words are:");
         System.out.println();

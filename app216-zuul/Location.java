@@ -1,6 +1,5 @@
 import java.util.Set;
 import java.util.HashMap;
-import java.util.Iterator;
 
 /**
  * Class Location - a location on the map of an adventure game.

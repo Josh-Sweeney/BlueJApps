@@ -4,7 +4,7 @@
  * talk to a vendor at the market
  *
  * @author Joshua Sweeney
- * @version 07-01-22
+ * @version 21-01-22
  */
 public class TalkCommand extends ZuulCommand
 {
@@ -28,19 +28,22 @@ public class TalkCommand extends ZuulCommand
     {
         if (this.person == null) 
         {
-            // if there is no second word, we don't know who to talk to...
+            // iI there is no second word, we don't know who to talk to...
             System.out.println("Talk to who?");
             return;
         }
 
-        switch (this.person)
+        Location currentLocation = zuul.MAP.getCurrentLocation();
+
+        String dialog = currentLocation.getDialog(person);
+
+        if (dialog == null)
         {
-            case "Butcher":
-                break;
-            case "Greengrocer":
-                break;
-            default:
-                break;
+            System.out.println("This person does not exist!");
+        }
+        else
+        {
+            System.out.println(person + ": " + dialog);
         }
     }
 }

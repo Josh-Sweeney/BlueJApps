@@ -19,8 +19,15 @@ import java.util.Iterator;
 
 public class Location 
 {
+    // The description of this location
     private String description;
-    private HashMap<String, Location> exits;        // stores exits of this room.
+
+    // Stores the exits of this location
+    private HashMap<String, Location> exits;
+
+    // Stores the items available in this location
+    private HashMap<String, Item> items;
+
 
     /**
      * Create a location described "description". Initially, it has
@@ -31,6 +38,36 @@ public class Location
     {
         this.description = description;
         exits = new HashMap<>();
+        this.items = new HashMap<>();
+    /**
+     * Adds an item to the list of items available
+     * in this location
+     */
+    public void addItem(Item item)
+    {
+        this.items.put(item.getName(), item);
+    }
+
+    /**
+     * Gets an item from the list of items in this location
+     * and returns the result
+     * @param itemName The name of the item to find
+     * @return The item if found. Null if the item
+     * was not found
+     */
+    public Item getItem(String itemName)
+    {
+        return this.items.get(itemName);
+    }
+
+    /**
+     * Removes the requested item from the list of
+     * items in this room
+     * @param item The item to remove from this room
+     */
+    public void removeItem(Item item)
+    {
+        this.items.remove(item.getName());
     }
 
     /**
@@ -61,6 +98,33 @@ public class Location
     public String getLongDescription()
     {
         return " You are " + description + ".\n" + getExitString();
+    }
+
+    /**
+     * Returns the items that are available in this area
+     * in the format:
+     *      Items: item1, item2...
+     * @return A list of items in this location
+     */
+    public String getItemsString()
+    {
+        // Return a message if there are no items in this room
+        if (this.items.isEmpty())
+        {
+            return "There are no items in this area. ";
+        }
+
+        String output = "Items: ";
+
+        // Iterate over the keys of the items hashmap (names)
+        for (String itemName : items.keySet())
+        {
+            // Append the item name to the message
+            output += itemName;
+        }
+
+        // Return the final output
+        return output;
     }
 
     /**

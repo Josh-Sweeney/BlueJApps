@@ -3,13 +3,12 @@
  * This class is reponsible for creating and
  * linking all the Locations in the game to
  * form a 2D or 3D network
- *             
+ * 
  * @author Derek Peacock and Nicholas Day
  * @author Modified by Joshua Sweeney
  * @version 07-01-22
  */
-public class Map
-{
+public class Map {
     // All the locations the player can access
     private Location park, forest, cave, townCentre, pub, bank, theatre, barber, market;
 
@@ -19,8 +18,7 @@ public class Map
     /**
      * Constructor for objects of class Map
      */
-    public Map()
-    {
+    public Map() {
         createLocations();
     }
 
@@ -30,74 +28,81 @@ public class Map
      * Both locations need to have been created before
      * their exists are linked.
      */
-    private void createLocations()
-    {
-        // Single locations (one entrance & exit)
-        createCave();
-        createForest();
-        createPark();
-        createTheatre();
-        createPub();
-        createBank();
-        createBarber();
-        createMarket();
+    private void createLocations() {
+        // Create the locations
+        park = new Location("in a park in the centre of a small village. ");
+        forest = new Location("in a forest next to the park. There is a cave nearby. ");
+        cave = new Location("in a dark cave within the forest. ");
+        townCentre = new Location("in the centre of the town. ");
+        barber = new Location("in the barber shop. ");
+        bank = new Location("in the bank. ");
+        pub = new Location("in the pub. ");
+        market = new Location("in the market of the town. ");
+        theatre = new Location("in a theatre. ");
 
-        // Hubs (more than one entrance & exit)
-        createTownCentre();
+        park.setExit("west", townCentre);
+
+        // Setup the exits and items in each location
+        setupPark();
+        setupCave();
+        setupForest();
+        setupTheatre();
+        setupPub();
+        setupBank();
+        setupBarber();
+        setupMarket();
+        setupTownCentre();
 
         // Start the game in the park
         currentLocation = park;
     }
 
     /**
-     * Create the park and link it to the
-     * cave
+     * Setup the park exits and items
      */
-    private void createPark() {
-        park = new Location("in a park in the centre of a small village. ");
-
+    private void setupPark() 
+    {
         // Create the exits
         park.setExit("north", forest);
-        park.setExit("west", townCentre);
-
+        
         // Create the items
         park.addItem(new Item("gold", ItemType.Gold));
     }
 
     /**
-     * Create the forest and link it to the
-     * park and cave
+     * Setup the forest exits and items
      */
-    private void createForest() {
-        forest = new Location("in a forest next to the park. There is a cave nearby. ");
-        forest.setExit("south", park);
+    private void setupForest()
+    {
+        // Create the exits
         forest.setExit("west", cave);
-
+        forest.setExit("south", park);
+        
         // Create the items
         forest.addItem(new Item("gold", ItemType.Gold));
     }
 
     /**
-     * Create the cave and link it to the
-     * forest
+     * Setup the Cave exits and items
      */
-    private void createCave() {
-        cave = new Location("in a dark cave within the forest. ");
+    private void setupCave()
+    {
+        // Create the exits
         cave.setExit("east", forest);
-
+        
         // Create the items
         cave.addItem(new Item("gold", ItemType.Gold));
     }
 
     /**
-     * Create the town centre and link it
-     * to the barber, bank, theatre and pub
+     * Setup the Town Centre exits and items
      */
-    private void createTownCentre() {
-        townCentre = new Location("in the centre of the town. ");
+    private void setupTownCentre()
+    {
+        // Create the exits
         townCentre.setExit("north", barber);
-        townCentre.setExit("north west", bank);
-        townCentre.setExit("south west", theatre);
+        townCentre.setExit("north-west", bank);
+        townCentre.setExit("south-west", theatre);
         townCentre.setExit("south", market);
 
         // Create the items
@@ -105,12 +110,11 @@ public class Map
     }
 
     /**
-     * Create the barber and link it to
-     * the town centre
+     * Setup the Barber exits and items
      */
-    private void createBarber()
+    private void setupBarber()
     {
-        barber = new Location("in the barber shop. ");
+        // Create the exits
         barber.setExit("south", townCentre);
 
         // Create the items
@@ -118,12 +122,10 @@ public class Map
     }
 
     /**
-     * Create the bank and link it to
-     * the town centre
+     * Setup the Bank exits and items
      */
-    private void createBank()
-    {
-        bank = new Location("in the bank. ");
+    private void setupBank() {
+
         bank.setExit("exit", townCentre);
 
         // Create the items
@@ -131,12 +133,11 @@ public class Map
     }
 
     /**
-     * Create the pub and link it to 
-     * the town centre
+     * Setup the Pub exits and items
      */
-    private void createPub()
+    private void setupPub()
     {
-        pub = new Location("in the pub. ");
+        // Create the exits
         pub.setExit("exit", townCentre);
 
         // Create the items
@@ -144,11 +145,11 @@ public class Map
     }
 
     /**
-     * Create the market and link it to
-     * the town centre
+     * Setup the Market exits and items
      */
-    private void createMarket() {
-        market = new Location("in the market of the town. ");
+    private void setupMarket()
+    {
+        // Create the exits
         market.setExit("south", townCentre);
 
         // Create the items
@@ -156,12 +157,12 @@ public class Map
     }
 
     /**
-     * Create the theatre linked to the town centre
+     * Setup the Theatre exits and items
      */
-    private void createTheatre()
+    private void setupTheatre()
     {
-        theatre = new Location("in a theatre. ");
-        theatre.setExit("exit", townCentre);        
+        // Create the exits
+        theatre.setExit("exit", townCentre);
 
         // Create the items
         theatre.addItem(new Item("gold", ItemType.Gold));
@@ -169,15 +170,14 @@ public class Map
 
     /**
      * Returns the current location the player is in
+     * 
      * @return The current location of the player
      */
-    public Location getCurrentLocation()
-    {
+    public Location getCurrentLocation() {
         return currentLocation;
     }
 
-    public void enterLocation(Location nextLocation)
-    {
+    public void enterLocation(Location nextLocation) {
         currentLocation = nextLocation;
     }
 }

@@ -63,5 +63,7 @@ public class Game
         System.out.println(" Type 'help' if you need help.");
         System.out.println();
         System.out.println(MAP.getCurrentLocation().getLongDescription());
+        System.out.println(MAP.getCurrentLocation().getItemsString());
+        System.out.println(MAP.getCurrentLocation().getPeopleString());
     }
 }

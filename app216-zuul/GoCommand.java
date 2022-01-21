@@ -40,6 +40,8 @@ public class GoCommand extends ZuulCommand
         {
             map.enterLocation(nextLocation);
             System.out.println(map.getCurrentLocation().getLongDescription());
+            System.out.println(map.getCurrentLocation().getItemsString());
+            System.out.println(map.getCurrentLocation().getPeopleString());
         }
     }
 }

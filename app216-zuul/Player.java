@@ -54,4 +54,13 @@ public class Player
 		// If not found, return null
 		return null;
 	}
+
+	/**
+	 * Adds an item to the current player's inventory
+	 * @param item The item to add to the inventory
+	 */
+	public void inventoryAdd(Item item) 
+	{
+		this.inventory.add(item);
+	}
 }

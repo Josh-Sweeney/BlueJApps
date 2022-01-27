@@ -32,6 +32,9 @@ public class Location
     // in this location
     private HashMap<String, String> people;
 
+    // Stores the items that can be used in this location
+    private HashMap<String, Item> useItems;
+
     /**
      * Create a location described "description". Initially, it has
      * no exits. "description" is something like "a kitchen" or
@@ -43,6 +46,7 @@ public class Location
         exits = new HashMap<>();
         this.items = new HashMap<>();
         this.people = new HashMap<>();
+        this.useItems = new HashMap<>();
     }
     
     /**
@@ -96,6 +100,28 @@ public class Location
     public void removeItem(Item item)
     {
         this.items.remove(item.getName());
+    }
+
+    /**
+     * Adds a item, that can be used in this location, to this
+     * location
+     * @param item The Item object to add
+     */
+    public void addUseItem(Item item)
+    {
+        this.useItems.put(item.getName(), item);
+    }
+
+    /**
+     * Checks if the given item can be used in this location
+     * @param item The item to check
+     * @return
+     */
+    public boolean canUseItem(String item)
+    {
+        // If the hashmap doesn't contain the given item
+        // then the item cannot be used
+        return this.useItems.containsKey(item);
     }
 
     /**

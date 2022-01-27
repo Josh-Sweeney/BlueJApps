@@ -29,7 +29,7 @@ public class UseCommand extends ZuulCommand
         if(item == null) 
         {
             // if there is no second word, we don't know what to take...
-            System.out.println("Take what?");
+            System.out.println("Use what?");
             return;
         }
 
@@ -47,18 +47,33 @@ public class UseCommand extends ZuulCommand
         Map map = zuul.MAP;
         Location currentLocation = map.getCurrentLocation();
 
-        // Check if the item can be used in the current room
-        if (item.canUseItem(currentLocation) == false)
-            return;
-
-        switch (item.getItemType())
+        // If the item can be used in the current room
+        if (currentLocation.canUseItem(this.item))
         {
-            case Coin:
-                break;
-            case Torch:
-                break;
-            default:
-                break;
+            switch (item.getItemType())
+            {
+                // Based on the item, this code will output the a message after using the item,
+                // and add the gold to the room so that the player can collect it
+                case Coin:
+                    System.out.println("Thanks for the coin, now you can have the gold. ");
+                    map.pub.addItem(new Item("gold", ItemType.Gold));
+                    break;
+                case Torch:
+                    System.out.println("You used the torch. Now you can see in the cave");
+                    map.cave.addItem(new Item("gold", ItemType.Gold)); 
+                    break;
+                case Flowers:
+                    System.out.println("You used the flowers. Now the bees are gone, you can collect the gold. ");
+                    map.forest.addItem(new Item("gold", ItemType.Gold));
+                    break;
+                default:
+                    break;
+            }
+
+            // Print the details of the current room
+            System.out.println(map.getCurrentLocation().getLongDescription());
+            System.out.println(map.getCurrentLocation().getItemsString());
+            System.out.println(map.getCurrentLocation().getPeopleString());
         }
     }
 }

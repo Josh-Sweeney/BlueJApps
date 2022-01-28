@@ -10,7 +10,7 @@
  */
 public class Map {
     // All the locations the player can access
-    private Location park, forest, cave, townCentre, pub, bank, theatre, barber, market;
+    public Location park, forest, cave, townCentre, pub, bank, theatre, barber, market;
 
     // The current location the player is present in
     private Location currentLocation;
@@ -31,16 +31,14 @@ public class Map {
     private void createLocations() {
         // Create the locations
         park = new Location("in a park in the centre of a small village. ");
-        forest = new Location("in a forest next to the park. There is a cave nearby. ");
-        cave = new Location("in a dark cave within the forest. ");
+        forest = new Location("in a forest next to the park. There is a cave nearby. There is a bee hive near something interesting...");
+        cave = new Location("in a dark cave within the forest. You cannot see anything. ");
         townCentre = new Location("in the centre of the town. ");
-        barber = new Location("in the barber shop. ");
+        barber = new Location("in the barber shop. The barber seems to want something... ");
         bank = new Location("in the bank. ");
         pub = new Location("in the pub. ");
         market = new Location("in the market of the town. ");
         theatre = new Location("in a theatre. ");
-
-        park.setExit("west", townCentre);
 
         // Setup the exits and items in each location
         setupPark();
@@ -64,6 +62,7 @@ public class Map {
     {
         // Create the exits
         park.setExit("north", forest);
+        park.setExit("west", townCentre);
         
         // Create the items
         park.addItem(new Item("gold", ItemType.Gold));
@@ -75,11 +74,11 @@ public class Map {
     private void setupForest()
     {
         // Create the exits
-        forest.setExit("west", cave);
+        forest.setExit("east", cave);
         forest.setExit("south", park);
-        
-        // Create the items
-        forest.addItem(new Item("gold", ItemType.Gold));
+
+        // Add the items that can be used in this location
+        forest.addUseItem(new Item("flowers", ItemType.Flowers));
     }
 
     /**
@@ -88,10 +87,10 @@ public class Map {
     private void setupCave()
     {
         // Create the exits
-        cave.setExit("east", forest);
-        
-        // Create the items
-        cave.addItem(new Item("gold", ItemType.Gold));
+        cave.setExit("west", forest);
+
+        // Add the items that can be used in this location
+        cave.addUseItem(new Item("torch", ItemType.Torch));
     }
 
     /**
@@ -102,8 +101,10 @@ public class Map {
         // Create the exits
         townCentre.setExit("north", barber);
         townCentre.setExit("north-west", bank);
+        townCentre.setExit("west", pub);
         townCentre.setExit("south-west", theatre);
         townCentre.setExit("south", market);
+        townCentre.setExit("east", park);
 
         // Create the items
         townCentre.addItem(new Item("gold", ItemType.Gold));
@@ -117,8 +118,8 @@ public class Map {
         // Create the exits
         barber.setExit("south", townCentre);
 
-        // Create the items
-        barber.addItem(new Item("gold", ItemType.Gold));
+        // Create the people
+        barber.addPerson("barber", "Give me a coin for this gold. ");
     }
 
     /**
@@ -126,7 +127,10 @@ public class Map {
      */
     private void setupBank() {
 
-        bank.setExit("exit", townCentre);
+        bank.setExit("south-east", townCentre);
+
+        // Create the items
+        pub.addItem(new Item("coin", ItemType.Coin));
 
         // Create the items
         bank.addItem(new Item("gold", ItemType.Gold));
@@ -138,10 +142,10 @@ public class Map {
     private void setupPub()
     {
         // Create the exits
-        pub.setExit("exit", townCentre);
-
-        // Create the items
-        pub.addItem(new Item("gold", ItemType.Gold));
+        pub.setExit("east", townCentre);
+        
+        // Create the people
+        pub.addPerson("", "If you give me a coin, I will let you take the gold. ");
     }
 
     /**
@@ -150,10 +154,16 @@ public class Map {
     private void setupMarket()
     {
         // Create the exits
-        market.setExit("south", townCentre);
+        market.setExit("north", townCentre);
 
         // Create the items
         market.addItem(new Item("gold", ItemType.Gold));
+        market.addItem(new Item("flowers", ItemType.Flowers));
+        market.addItem(new Item("torch", ItemType.Torch));
+
+        // Create the people
+        market.addPerson("flower salesman", "You can take these flowers. ");
+        market.addPerson("torch salesman", "You can take this torch. ");
     }
 
     /**
@@ -162,7 +172,7 @@ public class Map {
     private void setupTheatre()
     {
         // Create the exits
-        theatre.setExit("exit", townCentre);
+        theatre.setExit("north-east", townCentre);
 
         // Create the items
         theatre.addItem(new Item("gold", ItemType.Gold));

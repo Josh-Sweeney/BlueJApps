@@ -8,13 +8,13 @@ import java.util.ArrayList;
 public class Player
 {
     // Health
-    public int health;
+    private int health;
 
     // Score
-    public int score;
+    private int score;
 
     // Inventory
-    public ArrayList<Item> inventory;
+    private ArrayList<Item> inventory;
 
     /**
      * Creates a new player with an initial
@@ -62,5 +62,22 @@ public class Player
     public void inventoryAdd(Item item) 
     {
         this.inventory.add(item);
+    }
+
+    /**
+     * Returns the player's score
+     */
+    public int getScore()
+    {
+        return score;
+    }
+
+    /**
+     * Increments the players score counter by the given amount
+     * @param score The amount to increase the score by
+     */
+    public void addScore(int score)
+    {
+        this.score += score;
     }
 }

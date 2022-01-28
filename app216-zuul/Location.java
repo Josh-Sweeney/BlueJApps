@@ -165,16 +165,16 @@ public class Location
         // Return a message if there are no items in this room
         if (this.items.isEmpty())
         {
-            return "There are no items in this area. ";
+            return " There are no items in this area. ";
         }
 
-        String output = "Items: ";
+        String output = " Items: ";
 
         // Iterate over the keys of the items hashmap (names)
         for (String itemName : items.keySet())
         {
             // Append the item name to the message
-            output += itemName;
+            output += itemName  + ", ";
         }
 
         // Return the final output
@@ -191,16 +191,16 @@ public class Location
         // Return a message if there are no people in this room
         if (this.people.isEmpty())
         {
-            return "There are no people in this area. ";
+            return " There are no people in this area. ";
         }
 
-        String output = "People: ";
+        String output = " People: ";
 
         // Iterate over the keys of the people hashmap (names)
         for (String person : people.keySet())
         {
             // Append the person name to the message
-            output += person;
+            output += person + ", ";
         }
 
         // Return the final output

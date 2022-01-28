@@ -27,6 +27,7 @@ public class GoCommand extends ZuulCommand
         }
 
         Map map = zuul.MAP;
+        Player player = zuul.PLAYER;
         
         // Try to leave current room.
         Location currentLocation = map.getCurrentLocation();
@@ -39,6 +40,7 @@ public class GoCommand extends ZuulCommand
         else 
         {
             map.enterLocation(nextLocation);
+            System.out.println(" Score: " + player.getScore());
             System.out.println(map.getCurrentLocation().getLongDescription());
             System.out.println(map.getCurrentLocation().getItemsString());
             System.out.println(map.getCurrentLocation().getPeopleString());

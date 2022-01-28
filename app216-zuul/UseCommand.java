@@ -71,6 +71,7 @@ public class UseCommand extends ZuulCommand
             }
 
             // Print the details of the current room
+            System.out.println(" Score: " + player.getScore());
             System.out.println(map.getCurrentLocation().getLongDescription());
             System.out.println(map.getCurrentLocation().getItemsString());
             System.out.println(map.getCurrentLocation().getPeopleString());

@@ -30,15 +30,15 @@ public class Map {
      */
     private void createLocations() {
         // Create the locations
-        park = new Location("in a park in the centre of a small village. ");
-        forest = new Location("in a forest next to the park. There is a cave nearby. There is a bee hive near something interesting...");
-        cave = new Location("in a dark cave within the forest. You cannot see anything. ");
-        townCentre = new Location("in the centre of the town. ");
-        barber = new Location("in the barber shop. The barber seems to want something... ");
-        bank = new Location("in the bank. ");
-        pub = new Location("in the pub. ");
-        market = new Location("in the market of the town. ");
-        theatre = new Location("in a theatre. ");
+        park = new Location("in a park in the centre of a small village");
+        forest = new Location("in a forest next to the park. There is a cave nearby. There is a bee hive near something interesting");
+        cave = new Location("in a dark cave within the forest. You cannot see anything");
+        townCentre = new Location("in the centre of the town");
+        barber = new Location("in the barber shop. The barber seems to want something..");
+        bank = new Location("in the bank");
+        pub = new Location("in the pub");
+        market = new Location("in the market of the town");
+        theatre = new Location("in a theatre");
 
         // Setup the exits and items in each location
         setupPark();

@@ -21,7 +21,8 @@ public class HelpCommand extends ZuulCommand
     public void execute()
     {
         System.out.println(" You find yourself in a park");
-        System.out.println(" in the centre of a small town.");        
+        System.out.println(" in the centre of a small town. Find all the gold to win the game.");        
+        System.out.println(" but don't take more than 15 minutes!");        
         System.out.println();
         System.out.println(" Your command words are:");
         System.out.println();

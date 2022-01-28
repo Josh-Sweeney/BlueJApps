@@ -40,6 +40,7 @@ public class GoCommand extends ZuulCommand
         else 
         {
             map.enterLocation(nextLocation);
+            System.out.println(" Time remaining: " + (900 - zuul.getElapsedTime()) + " seconds: ");
             System.out.println(" Score: " + player.getScore());
             System.out.println(map.getCurrentLocation().getLongDescription());
             System.out.println(map.getCurrentLocation().getItemsString());

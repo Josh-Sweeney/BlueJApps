@@ -13,6 +13,9 @@ public class Player
     // Score
     private int score;
 
+    // Status
+    private String status;
+
     // Inventory
     private ArrayList<Item> inventory;
 
@@ -79,5 +82,13 @@ public class Player
     public void addScore(int score)
     {
         this.score += score;
+    }
+
+    /**
+     * Updates the status of the player
+     */
+    public void setStatus(String status)
+    {
+        this.status = status;
     }
 }

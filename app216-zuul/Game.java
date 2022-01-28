@@ -1,3 +1,6 @@
+import java.time.LocalDateTime;
+import java.util.Timer;
+
 /**
  *  This class is the main class of the "World of Zuul" application. 
  *  "World of Zuul" is a very simple, text based adventure game.  Users 
@@ -22,6 +25,7 @@ public class Game
     public final Player PLAYER;
     private CommandReader reader;
     private boolean gameOver;
+    private int startTime; // The time the game was started
         
     /**
      * Create the game and initialise its internal map.
@@ -31,6 +35,7 @@ public class Game
         MAP = new Map();
         PLAYER = new Player(10, 0);
         reader = new CommandReader(this);
+        startTime = LocalDateTime.now().getSecond();
     }
 
     /**
@@ -62,9 +67,26 @@ public class Game
         System.out.println(" World of Zuul is a new, incredibly boring adventure game.");
         System.out.println(" Type 'help' if you need help.");
         System.out.println();
+        System.out.println(" Time remaining: " + (900 - getElapsedTime()) + " seconds: ");
         System.out.println(" Score: " + PLAYER.getScore());
         System.out.println(MAP.getCurrentLocation().getLongDescription());
         System.out.println(MAP.getCurrentLocation().getItemsString());
         System.out.println(MAP.getCurrentLocation().getPeopleString());
+    }
+
+    /**
+     * Gets the elapsed time of the game
+     */
+    public int getElapsedTime()
+    {
+        return LocalDateTime.now().getSecond() - startTime;
+    }
+
+    /**
+     * Sets the games status to game over
+     */
+    public void setGameOver()
+    {
+        this.gameOver = true;
     }
 }

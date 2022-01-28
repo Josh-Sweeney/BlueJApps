@@ -72,6 +72,7 @@ public class TakeCommand extends ZuulCommand
         
         // Print the current location, items and people again
         System.out.println(" Score: " + player.getScore());
+        System.out.println(" Time remaining: " + (900 - zuul.getElapsedTime()) + " seconds: ");
         System.out.println(currentLocation.getLongDescription());
         System.out.println(currentLocation.getItemsString());
         System.out.println(currentLocation.getPeopleString());

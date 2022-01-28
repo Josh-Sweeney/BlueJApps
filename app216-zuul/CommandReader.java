@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.Period;
 import java.util.ArrayList;
 /**
  * This class is part of the "World of Zuul" application. 
@@ -64,6 +67,16 @@ public class CommandReader
 
     private boolean executeCommand()
     {
+        // Compare the current time to the game's start time to see
+        // if the game is lost    
+        if ((900 - game.getElapsedTime()) <= 0)
+        {
+            game.PLAYER.setStatus("Lost");
+            game.setGameOver();
+            System.out.println("Game over! Thanks for playing. ");
+            System.exit(0);
+        }
+
         if(commandWord.equals(CommandWords.GO.word))
         {
             GoCommand go = new GoCommand(game, word2);

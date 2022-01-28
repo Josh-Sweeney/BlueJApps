@@ -50,6 +50,18 @@ public class TakeCommand extends ZuulCommand
 
             // Print out a message to the player indicating that they took the item
             System.out.println("Took the " + this.item + ". ");
+
+            // If the item was gold, increase the players score
+            if (itemToTake.getItemType() == ItemType.Gold)
+            {
+                player.addScore(5);
+
+                // Check if the game is over
+                if (player.getScore() == 40)
+                {
+                    System.out.println("You have won the game! ");
+                }
+            }
         }
         else // The item could not be found in this room
         {
@@ -59,6 +71,7 @@ public class TakeCommand extends ZuulCommand
         }
         
         // Print the current location, items and people again
+        System.out.println(" Score: " + player.getScore());
         System.out.println(currentLocation.getLongDescription());
         System.out.println(currentLocation.getItemsString());
         System.out.println(currentLocation.getPeopleString());

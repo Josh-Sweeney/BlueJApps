@@ -1,0 +1,15 @@
+Game game1 = new Game();
+game1.play();
+
+ Welcome to the World of Zuul!
+ World of Zuul is a new, incredibly boring adventure game.
+ Type 'help' if you need help.
+
+ Time remaining: 898 seconds. 
+ Score: 0
+ You are in a park in the centre of a small village.
+ Exits: north west
+ Items: gold, 
+ There are no people in this area. 
+ > go west
+Game over! Thanks for playing. 

@@ -1,0 +1,226 @@
+Game game1 = new Game();
+game1.play();
+
+ Welcome to the World of Zuul!
+ World of Zuul is a new, incredibly boring adventure game.
+ Type 'help' if you need help.
+
+ Time remaining: 897 seconds. 
+ Score: 0
+ You are in a park in the centre of a small village.
+ Exits: north west
+ Items: gold, 
+ There are no people in this area. 
+ > take gold
+Took the gold. 
+ Score: 5
+ Time remaining: 894 seconds: 
+ You are in a park in the centre of a small village.
+ Exits: north west
+ There are no items in this area. 
+ There are no people in this area. 
+ > go west
+ Time remaining: 892 seconds: 
+ Score: 5
+ You are in the centre of the town.
+ Exits: east south north west north-west south-west
+ Items: gold, 
+ There are no people in this area. 
+ > take gold
+Took the gold. 
+ Score: 10
+ Time remaining: 890 seconds: 
+ You are in the centre of the town.
+ Exits: east south north west north-west south-west
+ There are no items in this area. 
+ There are no people in this area. 
+ > go south
+ Time remaining: 884 seconds: 
+ Score: 10
+ You are in the market of the town.
+ Exits: north
+ Items: gold, flowers, torch, 
+ People: torch-salesman, flower-salesman, 
+ > talk torch-salesman
+torch-salesman: You can take this torch. 
+ > talk flower-salesman
+flower-salesman: You can take these flowers. 
+ > take gold
+Took the gold. 
+ Score: 15
+ Time remaining: 933 seconds: 
+ You are in the market of the town.
+ Exits: north
+ Items: flowers, torch, 
+ People: torch-salesman, flower-salesman, 
+ > take flowers
+Took the flowers. 
+ Score: 15
+ Time remaining: 929 seconds: 
+ You are in the market of the town.
+ Exits: north
+ Items: torch, 
+ People: torch-salesman, flower-salesman, 
+ > take torch
+Took the torch. 
+ Score: 15
+ Time remaining: 927 seconds: 
+ You are in the market of the town.
+ Exits: north
+ There are no items in this area. 
+ People: torch-salesman, flower-salesman, 
+ > go north
+ Time remaining: 926 seconds: 
+ Score: 15
+ You are in the centre of the town.
+ Exits: east south north west north-west south-west
+ There are no items in this area. 
+ There are no people in this area. 
+ > go south-west
+ Time remaining: 923 seconds: 
+ Score: 15
+ You are in a theatre.
+ Exits: north-east
+ Items: gold, 
+ There are no people in this area. 
+ > take gold
+Took the gold. 
+ Score: 20
+ Time remaining: 922 seconds: 
+ You are in a theatre.
+ Exits: north-east
+ There are no items in this area. 
+ There are no people in this area. 
+ > go north-east
+ Time remaining: 918 seconds: 
+ Score: 20
+ You are in the centre of the town.
+ Exits: east south north west north-west south-west
+ There are no items in this area. 
+ There are no people in this area. 
+ > go west
+ Time remaining: 916 seconds: 
+ Score: 20
+ You are in the pub.
+ Exits: east
+ Items: coin, 
+ People: bartender, 
+ > talk bartender
+bartender: Take this coin. 
+ > take coin
+Took the coin. 
+ Score: 20
+ Time remaining: 911 seconds: 
+ You are in the pub.
+ Exits: east
+ There are no items in this area. 
+ People: bartender, 
+ > go east
+ Time remaining: 909 seconds: 
+ Score: 20
+ You are in the centre of the town.
+ Exits: east south north west north-west south-west
+ There are no items in this area. 
+ There are no people in this area. 
+ > go north-west
+ Time remaining: 903 seconds: 
+ Score: 20
+ You are in the bank.
+ Exits: south-east
+ Items: gold, 
+ There are no people in this area. 
+ > take gold
+Took the gold. 
+ Score: 25
+ Time remaining: 901 seconds: 
+ You are in the bank.
+ Exits: south-east
+ There are no items in this area. 
+ There are no people in this area. 
+ > go south-east
+ Time remaining: 898 seconds: 
+ Score: 25
+ You are in the centre of the town.
+ Exits: east south north west north-west south-west
+ There are no items in this area. 
+ There are no people in this area. 
+ > go north
+ Time remaining: 895 seconds: 
+ Score: 25
+ You are in the barber shop. The barber seems to want something...
+ Exits: south
+ There are no items in this area. 
+ People: barber, 
+ > talk barber
+barber: Give me a coin for this gold. 
+ > use coin
+Barber: Thanks for the coin, now you can have the gold. 
+ Score: 25
+ Time remaining: 887 seconds: 
+ You are in the barber shop. The barber seems to want something...
+ Exits: south
+ Items: gold, 
+ People: barber, 
+ > take gold
+Took the gold. 
+ Score: 30
+ Time remaining: 885 seconds: 
+ You are in the barber shop. The barber seems to want something...
+ Exits: south
+ There are no items in this area. 
+ People: barber, 
+ > go south
+ Time remaining: 881 seconds: 
+ Score: 30
+ You are in the centre of the town.
+ Exits: east south north west north-west south-west
+ There are no items in this area. 
+ There are no people in this area. 
+ > go east
+ Time remaining: 878 seconds: 
+ Score: 30
+ You are in a park in the centre of a small village.
+ Exits: north west
+ There are no items in this area. 
+ There are no people in this area. 
+ > go north
+ Time remaining: 937 seconds: 
+ Score: 30
+ You are in a forest next to the park. There is a cave nearby. There is a bee hive near something interesting.
+ Exits: east south
+ There are no items in this area. 
+ There are no people in this area. 
+ > use flowers
+You used the flowers. Now the bees are gone, you can collect the gold. 
+ Score: 30
+ Time remaining: 935 seconds: 
+ You are in a forest next to the park. There is a cave nearby. There is a bee hive near something interesting.
+ Exits: east south
+ Items: gold, 
+ There are no people in this area. 
+ > take gold
+Took the gold. 
+ Score: 35
+ Time remaining: 932 seconds: 
+ You are in a forest next to the park. There is a cave nearby. There is a bee hive near something interesting.
+ Exits: east south
+ There are no items in this area. 
+ There are no people in this area. 
+ > go east
+ Time remaining: 927 seconds: 
+ Score: 35
+ You are in a dark cave within the forest. You cannot see anything.
+ Exits: west
+ There are no items in this area. 
+ There are no people in this area. 
+ > use torch
+You used the torch. Now you can see in the cave
+ Score: 35
+ Time remaining: 926 seconds: 
+ You are in a dark cave within the forest. You cannot see anything.
+ Exits: west
+ Items: gold, 
+ There are no people in this area. 
+ > take gold
+Took the gold. 
+You have won the game! 

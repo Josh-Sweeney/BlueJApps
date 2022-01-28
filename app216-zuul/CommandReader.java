@@ -1,8 +1,4 @@
 import java.util.Scanner;
-import java.time.Duration;
-import java.time.LocalDateTime;
-import java.time.Period;
-import java.util.ArrayList;
 /**
  * This class is part of the "World of Zuul" application. 
  * "World of Zuul" is a very simple, text based adventure game.  

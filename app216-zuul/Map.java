@@ -145,7 +145,7 @@ public class Map {
         pub.setExit("east", townCentre);
         
         // Create the people
-        pub.addPerson("", "If you give me a coin, I will let you take the gold. ");
+        pub.addPerson("Bartender", "If you give me a coin, I will let you take the gold. ");
     }
 
     /**

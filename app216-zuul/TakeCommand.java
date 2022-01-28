@@ -60,6 +60,7 @@ public class TakeCommand extends ZuulCommand
                 if (player.getScore() == 40)
                 {
                     System.out.println("You have won the game! ");
+                    System.exit(0);
                 }
             }
         }

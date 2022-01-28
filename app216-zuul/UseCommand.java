@@ -55,8 +55,8 @@ public class UseCommand extends ZuulCommand
                 // Based on the item, this code will output the a message after using the item,
                 // and add the gold to the room so that the player can collect it
                 case Coin:
-                    System.out.println("Thanks for the coin, now you can have the gold. ");
-                    map.pub.addItem(new Item("gold", ItemType.Gold));
+                    System.out.println("Barber: Thanks for the coin, now you can have the gold. ");
+                    map.barber.addItem(new Item("gold", ItemType.Gold));
                     break;
                 case Torch:
                     System.out.println("You used the torch. Now you can see in the cave");

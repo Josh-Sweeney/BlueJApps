@@ -120,6 +120,9 @@ public class Map {
 
         // Create the people
         barber.addPerson("barber", "Give me a coin for this gold. ");
+
+        // Add the items that can be used in this location
+        barber.addUseItem(new Item("coin", ItemType.Coin));
     }
 
     /**
@@ -128,9 +131,6 @@ public class Map {
     private void setupBank() {
 
         bank.setExit("south-east", townCentre);
-
-        // Create the items
-        pub.addItem(new Item("coin", ItemType.Coin));
 
         // Create the items
         bank.addItem(new Item("gold", ItemType.Gold));
@@ -145,7 +145,10 @@ public class Map {
         pub.setExit("east", townCentre);
         
         // Create the people
-        pub.addPerson("Bartender", "If you give me a coin, I will let you take the gold. ");
+        pub.addPerson("bartender", "Take this coin. ");
+
+        // Create the items
+        pub.addItem(new Item("coin", ItemType.Coin));
     }
 
     /**
@@ -162,8 +165,8 @@ public class Map {
         market.addItem(new Item("torch", ItemType.Torch));
 
         // Create the people
-        market.addPerson("flower salesman", "You can take these flowers. ");
-        market.addPerson("torch salesman", "You can take this torch. ");
+        market.addPerson("flower-salesman", "You can take these flowers. ");
+        market.addPerson("torch-salesman", "You can take this torch. ");
     }
 
     /**

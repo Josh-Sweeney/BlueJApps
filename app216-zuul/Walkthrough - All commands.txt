@@ -1,0 +1,79 @@
+Game game1 = new Game();
+game1.play();
+
+ Welcome to the World of Zuul!
+ World of Zuul is a new, incredibly boring adventure game.
+ Type 'help' if you need help.
+
+ Time remaining: 897 seconds. 
+ Score: 0
+ You are in a park in the centre of a small village.
+ Exits: north west
+ Items: gold, 
+ There are no people in this area. 
+ > help
+ You find yourself in a park
+ in the centre of a small town. Find all the gold to win the game.
+ but don't take more than 15 minutes!
+
+ Your command words are:
+
+ go	  : Exit location in <direction>
+ take	  : Take <item> from location
+ use	  : Use <item> from inventory
+ talk	  : Talk to a <person> in the market
+ help	  : List all available commands
+ quit	  : End the game
+
+ e.g. go west, take gold
+
+ You are in a park in the centre of a small village.
+ Exits: north west
+ > go west
+ Time remaining: 892 seconds: 
+ Score: 0
+ You are in the centre of the town.
+ Exits: east south north west north-west south-west
+ Items: gold, 
+ There are no people in this area. 
+ > go west
+ Time remaining: 889 seconds: 
+ Score: 0
+ You are in the pub.
+ Exits: east
+ Items: coin, 
+ People: bartender, 
+ > talk bartender
+bartender: Take this coin. 
+ > take coin
+Took the coin. 
+ Score: 0
+ Time remaining: 941 seconds: 
+ You are in the pub.
+ Exits: east
+ There are no items in this area. 
+ People: bartender, 
+ > go east
+ Time remaining: 940 seconds: 
+ Score: 0
+ You are in the centre of the town.
+ Exits: east south north west north-west south-west
+ Items: gold, 
+ There are no people in this area. 
+ > go north
+ Time remaining: 925 seconds: 
+ Score: 0
+ You are in the barber shop. The barber seems to want something...
+ Exits: south
+ There are no items in this area. 
+ People: barber, 
+ > use coin
+Barber: Thanks for the coin, now you can have the gold. 
+ Score: 0
+ Time remaining: 923 seconds: 
+ You are in the barber shop. The barber seems to want something...
+ Exits: south
+ Items: gold, 
+ People: barber, 
+ > quit
+Thank you for playing.  Good bye.
